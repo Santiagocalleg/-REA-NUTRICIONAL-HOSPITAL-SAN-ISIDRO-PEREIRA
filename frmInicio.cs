@@ -16,13 +16,13 @@ namespace ÁREA_NUTRICIONAL_HOSPITAL_SAN_ISIDRO_PEREIRA
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(textBox1.Text !=Usuario || textBox2.Text !=Contraseña)
+            if(txtBxUsuario.Text !=Usuario || textBox2.Text !=Contraseña)
             {
-                if(textBox1.Text !=Usuario)
+                if(txtBxUsuario.Text !=Usuario)
                 {
                     MessageBox.Show("Usuario Incorrecto");
-                    textBox1.Clear();
-                    textBox1.Focus();
+                    txtBxUsuario.Clear();
+                    txtBxUsuario.Focus();
                     return;
                 }
                 if(textBox2.Text !=Contraseña)
@@ -32,14 +32,32 @@ namespace ÁREA_NUTRICIONAL_HOSPITAL_SAN_ISIDRO_PEREIRA
                     textBox2.Focus();
                     return;
                 }
+           
             }
             else
             {
-                textBox1.Clear();
+                txtBxUsuario.Clear();
                 textBox2.Clear();
                 frmOpciones Form = new frmOpciones();
+                this.Hide();
                 Form.ShowDialog();
+                
             }
+            
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            
+             Application.Exit();
+           
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show("Contactese con soporte técnico");
+        }
+
+        
     }
 }

@@ -19,9 +19,9 @@ namespace ÁREA_NUTRICIONAL_HOSPITAL_SAN_ISIDRO_PEREIRA
             toolStripLabel2.Enabled = false;
             toolStripLabel3.Enabled = false;
         }
-
-        private void toolStripLabel1_Click(object sender, EventArgs e)
+private void toolStripLabel1_Click(object sender, EventArgs e)
         {
+
             if (ValidarNombre() == false)
             {
                 return;
@@ -117,23 +117,23 @@ namespace ÁREA_NUTRICIONAL_HOSPITAL_SAN_ISIDRO_PEREIRA
             miCaracterizacion.Apellidoscompletos = textBox2.Text;
             miCaracterizacion.Tipoidentificacion = comboBox1.SelectedItem.ToString();
             miCaracterizacion.Numeroidentificacion = textBox3.Text;
-            miCaracterizacion.Paisorigen = textBox4.Text;
+            miCaracterizacion.Paisorigen = comboBox8.Text;
             miCaracterizacion.Tiempopermanencia = int.Parse(textBox5.Text);
             miCaracterizacion.Genero = comboBox2.SelectedItem.ToString();
-            miCaracterizacion.Fechanacimiento = textBox6.Text;
+            miCaracterizacion.Fechanacimiento = dateTimePicker1.Text;
             miCaracterizacion.Edad = int.Parse(textBox7.Text);
             miCaracterizacion.Estadocivil = comboBox3.SelectedItem.ToString();
             miCaracterizacion.Numerohijos = int.Parse(textBox8.Text);
             miCaracterizacion.Direccionresidencia = textBox9.Text;
             miCaracterizacion.Barrioresidencia = textBox10.Text;
             miCaracterizacion.Telefonocontacto = int.Parse(textBox11.Text);
-            miCaracterizacion.Ocupacion = textBox12.Text;
+            miCaracterizacion.Ocupacion = comboBox7.Text;
             miCaracterizacion.Nivelescolaridad = comboBox4.SelectedItem.ToString();
             miCaracterizacion.Eps = textBox13.Text;
             miCaracterizacion.Regimen = comboBox5.SelectedItem.ToString();
             miCaracterizacion.Email = textBox14.Text;
             miCaracterizacion.Contactoemergencia = int.Parse(textBox15.Text);
-            miCaracterizacion.Antecedentesmedicos = textBox16.Text;
+            miCaracterizacion.Antecedentesmedicos = label21.Text;
             miCaracterizacion.Convenio = comboBox6.SelectedItem.ToString();
 
             MiLista.Add(miCaracterizacion);
@@ -143,7 +143,6 @@ namespace ÁREA_NUTRICIONAL_HOSPITAL_SAN_ISIDRO_PEREIRA
             textBox1.Focus();
             toolStripLabel2.Enabled = true;
 
-
         }
         //Metodo para limpiar los controles
         private void LimpiarControles()
@@ -151,19 +150,18 @@ namespace ÁREA_NUTRICIONAL_HOSPITAL_SAN_ISIDRO_PEREIRA
             textBox1.Clear();
             textBox2.Clear();
             textBox3.Clear();
-            textBox4.Clear();
+            comboBox8.SelectedIndex = 0;
             textBox5.Clear();
-            textBox6.Clear();
             textBox7.Clear();
             textBox8.Clear();
             textBox9.Clear();
             textBox10.Clear();
             textBox11.Clear();
-            textBox12.Clear();
+            comboBox7.SelectedIndex = 0;
             textBox13.Clear();
             textBox14.Clear();
             textBox15.Clear();
-            textBox16.Clear();
+            checkedListBox1.SelectedIndex = 0;
             comboBox1.SelectedIndex = 0;
             comboBox2.SelectedIndex = 0;
             comboBox3.SelectedIndex = 0;
@@ -189,14 +187,14 @@ namespace ÁREA_NUTRICIONAL_HOSPITAL_SAN_ISIDRO_PEREIRA
         //Validar Antecedentes médicos
         private bool ValidarAntecedentes()
         {
-            if (string.IsNullOrEmpty(textBox16.Text))
+            if (string.IsNullOrEmpty(checkedListBox1.Text))
             {
-                errorProvider1.SetError(textBox16, "Debe ingresar los antecedentes médicos");
+                errorProvider1.SetError(checkedListBox1, "Debe ingresar los antecedentes médicos");
                 return false;
             }
             else
             {
-                errorProvider1.SetError(textBox16, "");
+                errorProvider1.SetError(checkedListBox1, "");
                 return true;
             }
         }
@@ -281,14 +279,14 @@ namespace ÁREA_NUTRICIONAL_HOSPITAL_SAN_ISIDRO_PEREIRA
         //Validar la Ocupación
         private bool ValidarOcupacion()
         {
-            if (string.IsNullOrEmpty(textBox12.Text))
+            if (string.IsNullOrEmpty(comboBox7.Text))
             {
-                errorProvider1.SetError(textBox12, "Debe ingresar la ocupación");
+                errorProvider1.SetError(comboBox7, "Debe ingresar la ocupación");
                 return false;
             }
             else
             {
-                errorProvider1.SetError(textBox12, "");
+                errorProvider1.SetError(comboBox7, "");
                 return true;
             }
         }
@@ -395,14 +393,14 @@ namespace ÁREA_NUTRICIONAL_HOSPITAL_SAN_ISIDRO_PEREIRA
         //Validar Fecha de Nacimiento
         private bool ValidarFechanacimiento()
         {
-            if (string.IsNullOrEmpty(textBox6.Text))
+            if (string.IsNullOrEmpty(dateTimePicker1.Text))
             {
-                errorProvider1.SetError(textBox6, "Debe ingresar la fecha de Nacimiento");
+                errorProvider1.SetError(dateTimePicker1, "Debe ingresar la fecha de Nacimiento");
                 return false;
             }
             else
             {
-                errorProvider1.SetError(textBox6, "");
+                errorProvider1.SetError(dateTimePicker1, "");
                 return true;
             }
         }
@@ -443,14 +441,14 @@ namespace ÁREA_NUTRICIONAL_HOSPITAL_SAN_ISIDRO_PEREIRA
         //Validar País de Origen
         private bool ValidarPaisorigen()
         {
-            if (string.IsNullOrEmpty(textBox4.Text))
+            if (string.IsNullOrEmpty(comboBox8.Text))
             {
-                errorProvider1.SetError(textBox4, "Debe ingresar el País de Origen");
+                errorProvider1.SetError(comboBox8, "Debe ingresar el País de Origen");
                 return false;
             }
             else
             {
-                errorProvider1.SetError(textBox4, "");
+                errorProvider1.SetError(comboBox8, "");
                 return true;
             }
         }
@@ -515,19 +513,16 @@ namespace ÁREA_NUTRICIONAL_HOSPITAL_SAN_ISIDRO_PEREIRA
             }
         }
 
-        private void toolStripLabel5_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+
 
         private void toolStripLabel2_Click(object sender, EventArgs e)
         {
-            if(ValidarNombre()==false)
+            if (ValidarNombre()==false)
             {
                 return;
             }
             ClsLista miCaracterizacion = GetCaracterizacion(textBox1.Text);
-            if(miCaracterizacion == null)
+            if (miCaracterizacion == null)
             {
                 errorProvider1.SetError(textBox1, "El nombre no se encuentra registrado en la lista");
                 LimpiarControles();
@@ -540,19 +535,19 @@ namespace ÁREA_NUTRICIONAL_HOSPITAL_SAN_ISIDRO_PEREIRA
                 textBox1.Text = miCaracterizacion.Nombrescompletos;
                 textBox2.Text = miCaracterizacion.Apellidoscompletos;
                 textBox3.Text = miCaracterizacion.Numeroidentificacion;
-                textBox4.Text = miCaracterizacion.Paisorigen;
+                comboBox8.Text = miCaracterizacion.Paisorigen;
                 textBox5.Text = miCaracterizacion.Tiempopermanencia.ToString();
-                textBox6.Text = miCaracterizacion.Fechanacimiento;
+                dateTimePicker1.Text = miCaracterizacion.Fechanacimiento;
                 textBox7.Text = miCaracterizacion.Edad.ToString();
                 textBox8.Text = miCaracterizacion.Numerohijos.ToString();
                 textBox9.Text = miCaracterizacion.Direccionresidencia;
                 textBox10.Text = miCaracterizacion.Barrioresidencia;
                 textBox11.Text = miCaracterizacion.Telefonocontacto.ToString();
-                textBox12.Text = miCaracterizacion.Ocupacion;
+                comboBox7.Text = miCaracterizacion.Ocupacion;
                 textBox13.Text = miCaracterizacion.Eps;
                 textBox14.Text = miCaracterizacion.Email;
                 textBox15.Text = miCaracterizacion.Contactoemergencia.ToString();
-                textBox16.Text = miCaracterizacion.Antecedentesmedicos;
+                checkedListBox1.Text = miCaracterizacion.Antecedentesmedicos;
                 comboBox1.SelectedItem = miCaracterizacion.Tipoidentificacion;
                 comboBox2.SelectedItem = miCaracterizacion.Genero;
                 comboBox3.SelectedItem = miCaracterizacion.Estadocivil;
@@ -561,6 +556,7 @@ namespace ÁREA_NUTRICIONAL_HOSPITAL_SAN_ISIDRO_PEREIRA
                 comboBox6.SelectedItem = miCaracterizacion.Convenio;
                 toolStripLabel3.Enabled = true;
             }
+
         }
         //Consultar Nombre
         private ClsLista GetCaracterizacion(string nombre)
@@ -568,8 +564,10 @@ namespace ÁREA_NUTRICIONAL_HOSPITAL_SAN_ISIDRO_PEREIRA
             return MiLista.Find(nombrec => nombrec.Nombrescompletos.Contains(nombre));
         }
 
+
         private void toolStripLabel3_Click(object sender, EventArgs e)
         {
+
             if (textBox1.Text == "")
             {
                 errorProvider1.SetError(textBox1, "Debe consultar la persona a eliminar");
@@ -604,6 +602,11 @@ namespace ÁREA_NUTRICIONAL_HOSPITAL_SAN_ISIDRO_PEREIRA
             this.Hide(); // Ocultar el formulario activo
             frmOpciones frm = new frmOpciones();
             frm.Show();
+        }
+
+        private void toolStripLabel5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
