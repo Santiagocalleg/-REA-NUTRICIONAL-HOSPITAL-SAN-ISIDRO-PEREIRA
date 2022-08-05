@@ -16,7 +16,7 @@ namespace ÁREA_NUTRICIONAL_HOSPITAL_SAN_ISIDRO_PEREIRA
         {
             InitializeComponent();
         }
-
+        //hola bb
         private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();

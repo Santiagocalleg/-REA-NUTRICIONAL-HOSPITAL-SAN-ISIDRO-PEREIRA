@@ -52,28 +52,28 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.txtBxNombre = new System.Windows.Forms.TextBox();
+            this.txtBxApellido = new System.Windows.Forms.TextBox();
+            this.txtBxNumeroIdentificacion = new System.Windows.Forms.TextBox();
+            this.txtBxPermanencia = new System.Windows.Forms.TextBox();
+            this.txtBxEdad = new System.Windows.Forms.TextBox();
+            this.txtBxHijos = new System.Windows.Forms.TextBox();
+            this.txtBxDireccion = new System.Windows.Forms.TextBox();
+            this.txtBxBarrio = new System.Windows.Forms.TextBox();
+            this.txtBxTelefono = new System.Windows.Forms.TextBox();
+            this.txtBxEPS = new System.Windows.Forms.TextBox();
+            this.txtBxEmail = new System.Windows.Forms.TextBox();
+            this.txtBxEmergencia = new System.Windows.Forms.TextBox();
+            this.cmbBxIdentificacion = new System.Windows.Forms.ComboBox();
+            this.cmbBxGenero = new System.Windows.Forms.ComboBox();
+            this.cmbBxEstadoCivil = new System.Windows.Forms.ComboBox();
+            this.cmbBxEscolaridad = new System.Windows.Forms.ComboBox();
+            this.cmbBxRegimen = new System.Windows.Forms.ComboBox();
+            this.cmbBxConvenio = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.dtTmPckrNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.cmbBxOcupacion = new System.Windows.Forms.ComboBox();
+            this.chckdLstBxAntecedentes = new System.Windows.Forms.CheckedListBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
@@ -85,13 +85,16 @@
             this.pctrBxHospital = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.cmbBxPais = new System.Windows.Forms.ComboBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label24 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctrBxHospital)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -314,214 +317,219 @@
             this.label22.TabIndex = 21;
             this.label22.Text = "Convenio";
             // 
-            // textBox1
+            // txtBxNombre
             // 
-            this.textBox1.BackColor = System.Drawing.Color.LightGray;
-            this.textBox1.Location = new System.Drawing.Point(552, 194);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(313, 37);
-            this.textBox1.TabIndex = 22;
+            this.txtBxNombre.BackColor = System.Drawing.Color.LightGray;
+            this.txtBxNombre.Location = new System.Drawing.Point(552, 194);
+            this.txtBxNombre.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtBxNombre.Name = "txtBxNombre";
+            this.txtBxNombre.Size = new System.Drawing.Size(313, 37);
+            this.txtBxNombre.TabIndex = 22;
             // 
-            // textBox2
+            // txtBxApellido
             // 
-            this.textBox2.BackColor = System.Drawing.Color.LightGray;
-            this.textBox2.Location = new System.Drawing.Point(1257, 194);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(319, 37);
-            this.textBox2.TabIndex = 23;
+            this.txtBxApellido.BackColor = System.Drawing.Color.LightGray;
+            this.txtBxApellido.Location = new System.Drawing.Point(1257, 194);
+            this.txtBxApellido.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtBxApellido.Name = "txtBxApellido";
+            this.txtBxApellido.Size = new System.Drawing.Size(319, 37);
+            this.txtBxApellido.TabIndex = 23;
             // 
-            // textBox3
+            // txtBxNumeroIdentificacion
             // 
-            this.textBox3.BackColor = System.Drawing.Color.LightGray;
-            this.textBox3.Location = new System.Drawing.Point(1257, 266);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(319, 37);
-            this.textBox3.TabIndex = 24;
+            this.txtBxNumeroIdentificacion.BackColor = System.Drawing.Color.LightGray;
+            this.txtBxNumeroIdentificacion.Location = new System.Drawing.Point(1257, 266);
+            this.txtBxNumeroIdentificacion.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtBxNumeroIdentificacion.Name = "txtBxNumeroIdentificacion";
+            this.txtBxNumeroIdentificacion.Size = new System.Drawing.Size(319, 37);
+            this.txtBxNumeroIdentificacion.TabIndex = 24;
             // 
-            // textBox5
+            // txtBxPermanencia
             // 
-            this.textBox5.BackColor = System.Drawing.Color.LightGray;
-            this.textBox5.Location = new System.Drawing.Point(690, 642);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(175, 37);
-            this.textBox5.TabIndex = 26;
+            this.txtBxPermanencia.BackColor = System.Drawing.Color.LightGray;
+            this.txtBxPermanencia.Location = new System.Drawing.Point(690, 642);
+            this.txtBxPermanencia.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtBxPermanencia.Name = "txtBxPermanencia";
+            this.txtBxPermanencia.Size = new System.Drawing.Size(175, 37);
+            this.txtBxPermanencia.TabIndex = 26;
             // 
-            // textBox7
+            // txtBxEdad
             // 
-            this.textBox7.BackColor = System.Drawing.Color.LightGray;
-            this.textBox7.Location = new System.Drawing.Point(1257, 415);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(319, 37);
-            this.textBox7.TabIndex = 28;
+            this.txtBxEdad.BackColor = System.Drawing.Color.LightGray;
+            this.txtBxEdad.Location = new System.Drawing.Point(1257, 415);
+            this.txtBxEdad.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtBxEdad.Name = "txtBxEdad";
+            this.txtBxEdad.Size = new System.Drawing.Size(319, 37);
+            this.txtBxEdad.TabIndex = 28;
             // 
-            // textBox8
+            // txtBxHijos
             // 
-            this.textBox8.BackColor = System.Drawing.Color.LightGray;
-            this.textBox8.Location = new System.Drawing.Point(1257, 492);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(319, 37);
-            this.textBox8.TabIndex = 29;
+            this.txtBxHijos.BackColor = System.Drawing.Color.LightGray;
+            this.txtBxHijos.Location = new System.Drawing.Point(1257, 492);
+            this.txtBxHijos.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtBxHijos.Name = "txtBxHijos";
+            this.txtBxHijos.Size = new System.Drawing.Size(319, 37);
+            this.txtBxHijos.TabIndex = 29;
             // 
-            // textBox9
+            // txtBxDireccion
             // 
-            this.textBox9.BackColor = System.Drawing.Color.LightGray;
-            this.textBox9.Location = new System.Drawing.Point(552, 564);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(313, 37);
-            this.textBox9.TabIndex = 30;
+            this.txtBxDireccion.BackColor = System.Drawing.Color.LightGray;
+            this.txtBxDireccion.Location = new System.Drawing.Point(552, 564);
+            this.txtBxDireccion.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtBxDireccion.Name = "txtBxDireccion";
+            this.txtBxDireccion.Size = new System.Drawing.Size(313, 37);
+            this.txtBxDireccion.TabIndex = 30;
             // 
-            // textBox10
+            // txtBxBarrio
             // 
-            this.textBox10.BackColor = System.Drawing.Color.LightGray;
-            this.textBox10.Location = new System.Drawing.Point(1257, 564);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(319, 37);
-            this.textBox10.TabIndex = 31;
+            this.txtBxBarrio.BackColor = System.Drawing.Color.LightGray;
+            this.txtBxBarrio.Location = new System.Drawing.Point(1257, 564);
+            this.txtBxBarrio.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtBxBarrio.Name = "txtBxBarrio";
+            this.txtBxBarrio.Size = new System.Drawing.Size(319, 37);
+            this.txtBxBarrio.TabIndex = 31;
             // 
-            // textBox11
+            // txtBxTelefono
             // 
-            this.textBox11.BackColor = System.Drawing.Color.LightGray;
-            this.textBox11.Location = new System.Drawing.Point(552, 724);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(313, 37);
-            this.textBox11.TabIndex = 32;
+            this.txtBxTelefono.BackColor = System.Drawing.Color.LightGray;
+            this.txtBxTelefono.Location = new System.Drawing.Point(552, 724);
+            this.txtBxTelefono.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtBxTelefono.Name = "txtBxTelefono";
+            this.txtBxTelefono.Size = new System.Drawing.Size(313, 37);
+            this.txtBxTelefono.TabIndex = 32;
             // 
-            // textBox13
+            // txtBxEPS
             // 
-            this.textBox13.BackColor = System.Drawing.Color.LightGray;
-            this.textBox13.Location = new System.Drawing.Point(552, 887);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(313, 37);
-            this.textBox13.TabIndex = 34;
+            this.txtBxEPS.BackColor = System.Drawing.Color.LightGray;
+            this.txtBxEPS.Location = new System.Drawing.Point(552, 887);
+            this.txtBxEPS.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtBxEPS.Name = "txtBxEPS";
+            this.txtBxEPS.Size = new System.Drawing.Size(313, 37);
+            this.txtBxEPS.TabIndex = 34;
             // 
-            // textBox14
+            // txtBxEmail
             // 
-            this.textBox14.BackColor = System.Drawing.Color.LightGray;
-            this.textBox14.Location = new System.Drawing.Point(552, 970);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(313, 37);
-            this.textBox14.TabIndex = 35;
+            this.txtBxEmail.BackColor = System.Drawing.Color.LightGray;
+            this.txtBxEmail.Location = new System.Drawing.Point(552, 970);
+            this.txtBxEmail.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtBxEmail.Name = "txtBxEmail";
+            this.txtBxEmail.Size = new System.Drawing.Size(313, 37);
+            this.txtBxEmail.TabIndex = 35;
             // 
-            // textBox15
+            // txtBxEmergencia
             // 
-            this.textBox15.BackColor = System.Drawing.Color.LightGray;
-            this.textBox15.Location = new System.Drawing.Point(1361, 724);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(215, 37);
-            this.textBox15.TabIndex = 36;
+            this.txtBxEmergencia.BackColor = System.Drawing.Color.LightGray;
+            this.txtBxEmergencia.Location = new System.Drawing.Point(1361, 724);
+            this.txtBxEmergencia.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtBxEmergencia.Name = "txtBxEmergencia";
+            this.txtBxEmergencia.Size = new System.Drawing.Size(215, 37);
+            this.txtBxEmergencia.TabIndex = 36;
             // 
-            // comboBox1
+            // cmbBxIdentificacion
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.LightGray;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbBxIdentificacion.BackColor = System.Drawing.Color.LightGray;
+            this.cmbBxIdentificacion.FormattingEnabled = true;
+            this.cmbBxIdentificacion.Items.AddRange(new object[] {
+            "",
             "Cedula de ciudadania",
             "Cedula de extranjeria",
             "Numero de identificación personal",
             "Tarjeta de identidad",
             "Registro civil",
             "Pasaporte"});
-            this.comboBox1.Location = new System.Drawing.Point(552, 266);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(313, 38);
-            this.comboBox1.TabIndex = 38;
+            this.cmbBxIdentificacion.Location = new System.Drawing.Point(552, 266);
+            this.cmbBxIdentificacion.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.cmbBxIdentificacion.Name = "cmbBxIdentificacion";
+            this.cmbBxIdentificacion.Size = new System.Drawing.Size(313, 38);
+            this.cmbBxIdentificacion.TabIndex = 38;
             // 
-            // comboBox2
+            // cmbBxGenero
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.LightGray;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cmbBxGenero.BackColor = System.Drawing.Color.LightGray;
+            this.cmbBxGenero.FormattingEnabled = true;
+            this.cmbBxGenero.Items.AddRange(new object[] {
+            "",
             "Maculino",
             "Femenino",
             "Otro"});
-            this.comboBox2.Location = new System.Drawing.Point(1257, 341);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(319, 38);
-            this.comboBox2.TabIndex = 39;
+            this.cmbBxGenero.Location = new System.Drawing.Point(1257, 341);
+            this.cmbBxGenero.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.cmbBxGenero.Name = "cmbBxGenero";
+            this.cmbBxGenero.Size = new System.Drawing.Size(319, 38);
+            this.cmbBxGenero.TabIndex = 39;
             // 
-            // comboBox3
+            // cmbBxEstadoCivil
             // 
-            this.comboBox3.BackColor = System.Drawing.Color.LightGray;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.cmbBxEstadoCivil.BackColor = System.Drawing.Color.LightGray;
+            this.cmbBxEstadoCivil.FormattingEnabled = true;
+            this.cmbBxEstadoCivil.Items.AddRange(new object[] {
+            "",
             "Soltero/a",
             "Casado/a",
             "Unión libre",
             "Separado/a",
             "Divorciado/a",
             "Viudo/a"});
-            this.comboBox3.Location = new System.Drawing.Point(552, 489);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(313, 38);
-            this.comboBox3.TabIndex = 40;
+            this.cmbBxEstadoCivil.Location = new System.Drawing.Point(552, 489);
+            this.cmbBxEstadoCivil.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.cmbBxEstadoCivil.Name = "cmbBxEstadoCivil";
+            this.cmbBxEstadoCivil.Size = new System.Drawing.Size(313, 38);
+            this.cmbBxEstadoCivil.TabIndex = 40;
             // 
-            // comboBox4
+            // cmbBxEscolaridad
             // 
-            this.comboBox4.BackColor = System.Drawing.Color.LightGray;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.cmbBxEscolaridad.BackColor = System.Drawing.Color.LightGray;
+            this.cmbBxEscolaridad.FormattingEnabled = true;
+            this.cmbBxEscolaridad.Items.AddRange(new object[] {
+            "",
             "Básica Primaria-Secundaria",
             "Media Vocacional",
             "Técnico Intermedio Profesional",
             "Tecnólogo",
             "Profesional",
             "Magíster, Doctor o Especialista"});
-            this.comboBox4.Location = new System.Drawing.Point(552, 808);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(313, 38);
-            this.comboBox4.TabIndex = 41;
+            this.cmbBxEscolaridad.Location = new System.Drawing.Point(552, 808);
+            this.cmbBxEscolaridad.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.cmbBxEscolaridad.Name = "cmbBxEscolaridad";
+            this.cmbBxEscolaridad.Size = new System.Drawing.Size(313, 38);
+            this.cmbBxEscolaridad.TabIndex = 41;
             // 
-            // comboBox5
+            // cmbBxRegimen
             // 
-            this.comboBox5.BackColor = System.Drawing.Color.LightGray;
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
+            this.cmbBxRegimen.BackColor = System.Drawing.Color.LightGray;
+            this.cmbBxRegimen.FormattingEnabled = true;
+            this.cmbBxRegimen.Items.AddRange(new object[] {
             "",
             "Contributivo",
             "Subsidiado",
             "De Excepcion",
             "Especial"});
-            this.comboBox5.Location = new System.Drawing.Point(1257, 887);
-            this.comboBox5.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(319, 38);
-            this.comboBox5.TabIndex = 42;
+            this.cmbBxRegimen.Location = new System.Drawing.Point(1257, 887);
+            this.cmbBxRegimen.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.cmbBxRegimen.Name = "cmbBxRegimen";
+            this.cmbBxRegimen.Size = new System.Drawing.Size(319, 38);
+            this.cmbBxRegimen.TabIndex = 42;
             // 
-            // comboBox6
+            // cmbBxConvenio
             // 
-            this.comboBox6.BackColor = System.Drawing.Color.LightGray;
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
+            this.cmbBxConvenio.BackColor = System.Drawing.Color.LightGray;
+            this.cmbBxConvenio.FormattingEnabled = true;
+            this.cmbBxConvenio.Items.AddRange(new object[] {
             "",
             "Covid-19",
             "Población Vulnerable",
             "Gestantes",
             "Población General"});
-            this.comboBox6.Location = new System.Drawing.Point(1257, 970);
-            this.comboBox6.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(319, 38);
-            this.comboBox6.TabIndex = 43;
+            this.cmbBxConvenio.Location = new System.Drawing.Point(1257, 970);
+            this.cmbBxConvenio.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.cmbBxConvenio.Name = "cmbBxConvenio";
+            this.cmbBxConvenio.Size = new System.Drawing.Size(319, 38);
+            this.cmbBxConvenio.TabIndex = 43;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.GridColor = System.Drawing.Color.Black;
             this.dataGridView1.Location = new System.Drawing.Point(269, 1201);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.dataGridView1.Name = "dataGridView1";
@@ -530,22 +538,23 @@
             this.dataGridView1.Size = new System.Drawing.Size(1413, 160);
             this.dataGridView1.TabIndex = 44;
             // 
-            // dateTimePicker1
+            // dtTmPckrNacimiento
             // 
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.LightGray;
-            this.dateTimePicker1.CustomFormat = "dd-MMM-yyyy";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(552, 415);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(313, 37);
-            this.dateTimePicker1.TabIndex = 45;
+            this.dtTmPckrNacimiento.CalendarMonthBackground = System.Drawing.Color.LightGray;
+            this.dtTmPckrNacimiento.CustomFormat = "dd-MMM-yyyy";
+            this.dtTmPckrNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtTmPckrNacimiento.Location = new System.Drawing.Point(552, 415);
+            this.dtTmPckrNacimiento.Margin = new System.Windows.Forms.Padding(4);
+            this.dtTmPckrNacimiento.Name = "dtTmPckrNacimiento";
+            this.dtTmPckrNacimiento.Size = new System.Drawing.Size(313, 37);
+            this.dtTmPckrNacimiento.TabIndex = 45;
             // 
-            // comboBox7
+            // cmbBxOcupacion
             // 
-            this.comboBox7.BackColor = System.Drawing.Color.LightGray;
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Items.AddRange(new object[] {
+            this.cmbBxOcupacion.BackColor = System.Drawing.Color.LightGray;
+            this.cmbBxOcupacion.FormattingEnabled = true;
+            this.cmbBxOcupacion.Items.AddRange(new object[] {
+            "",
             "Comerciante",
             "Independiente",
             "Empleado privado",
@@ -554,17 +563,18 @@
             "Rentista",
             "Transportador",
             "Prestador de servicios"});
-            this.comboBox7.Location = new System.Drawing.Point(1257, 808);
-            this.comboBox7.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(319, 38);
-            this.comboBox7.TabIndex = 46;
+            this.cmbBxOcupacion.Location = new System.Drawing.Point(1257, 808);
+            this.cmbBxOcupacion.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.cmbBxOcupacion.Name = "cmbBxOcupacion";
+            this.cmbBxOcupacion.Size = new System.Drawing.Size(319, 38);
+            this.cmbBxOcupacion.TabIndex = 46;
             // 
-            // checkedListBox1
+            // chckdLstBxAntecedentes
             // 
-            this.checkedListBox1.BackColor = System.Drawing.Color.LightGray;
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
+            this.chckdLstBxAntecedentes.BackColor = System.Drawing.Color.LightGray;
+            this.chckdLstBxAntecedentes.CheckOnClick = true;
+            this.chckdLstBxAntecedentes.FormattingEnabled = true;
+            this.chckdLstBxAntecedentes.Items.AddRange(new object[] {
             "Anemia",
             "Artritis",
             "Asma",
@@ -587,11 +597,11 @@
             "Presión arterial alta",
             "Síndrome del intestino irritable",
             "VIH/SIDA"});
-            this.checkedListBox1.Location = new System.Drawing.Point(586, 1054);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(279, 140);
-            this.checkedListBox1.TabIndex = 47;
+            this.chckdLstBxAntecedentes.Location = new System.Drawing.Point(586, 1054);
+            this.chckdLstBxAntecedentes.Margin = new System.Windows.Forms.Padding(4);
+            this.chckdLstBxAntecedentes.Name = "chckdLstBxAntecedentes";
+            this.chckdLstBxAntecedentes.Size = new System.Drawing.Size(279, 140);
+            this.chckdLstBxAntecedentes.TabIndex = 47;
             // 
             // toolStrip1
             // 
@@ -605,7 +615,7 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(1682, 30);
+            this.toolStrip1.Size = new System.Drawing.Size(1706, 30);
             this.toolStrip1.TabIndex = 48;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -682,7 +692,7 @@
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel2.BackColor = System.Drawing.Color.DarkCyan;
             this.panel2.Controls.Add(this.label23);
-            this.panel2.Location = new System.Drawing.Point(1741, 30);
+            this.panel2.Location = new System.Drawing.Point(2895, 30);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1707, 105);
             this.panel2.TabIndex = 50;
@@ -697,11 +707,12 @@
             this.label23.TabIndex = 0;
             this.label23.Text = "CARACTERIZACIÓN PACIENTE";
             // 
-            // comboBox8
+            // cmbBxPais
             // 
-            this.comboBox8.BackColor = System.Drawing.Color.LightGray;
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Items.AddRange(new object[] {
+            this.cmbBxPais.BackColor = System.Drawing.Color.LightGray;
+            this.cmbBxPais.FormattingEnabled = true;
+            this.cmbBxPais.Items.AddRange(new object[] {
+            "",
             "Argentina",
             "Bolivia",
             "Brasil",
@@ -728,11 +739,33 @@
             "Surinam",
             "Uruguay",
             "Venezuela"});
-            this.comboBox8.Location = new System.Drawing.Point(552, 342);
-            this.comboBox8.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(313, 38);
-            this.comboBox8.TabIndex = 51;
+            this.cmbBxPais.Location = new System.Drawing.Point(552, 342);
+            this.cmbBxPais.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.cmbBxPais.Name = "cmbBxPais";
+            this.cmbBxPais.Size = new System.Drawing.Size(313, 38);
+            this.cmbBxPais.TabIndex = 51;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.DarkCyan;
+            this.panel3.Controls.Add(this.label24);
+            this.panel3.Location = new System.Drawing.Point(254, 33);
+            this.panel3.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1452, 98);
+            this.panel3.TabIndex = 53;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label24.ForeColor = System.Drawing.Color.White;
+            this.label24.Location = new System.Drawing.Point(316, 11);
+            this.label24.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(809, 58);
+            this.label24.TabIndex = 0;
+            this.label24.Text = "CARACTERIZACIÓN DE PACIENTES";
             // 
             // frmCaracterizacion
             // 
@@ -740,33 +773,34 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.ClientSize = new System.Drawing.Size(1353, 658);
-            this.Controls.Add(this.comboBox8);
+            this.ClientSize = new System.Drawing.Size(1732, 658);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.cmbBxPais);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.checkedListBox1);
-            this.Controls.Add(this.comboBox7);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.chckdLstBxAntecedentes);
+            this.Controls.Add(this.cmbBxOcupacion);
+            this.Controls.Add(this.dtTmPckrNacimiento);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBox6);
-            this.Controls.Add(this.comboBox5);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox15);
-            this.Controls.Add(this.textBox14);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cmbBxConvenio);
+            this.Controls.Add(this.cmbBxRegimen);
+            this.Controls.Add(this.cmbBxEscolaridad);
+            this.Controls.Add(this.cmbBxEstadoCivil);
+            this.Controls.Add(this.cmbBxGenero);
+            this.Controls.Add(this.cmbBxIdentificacion);
+            this.Controls.Add(this.txtBxEmergencia);
+            this.Controls.Add(this.txtBxEmail);
+            this.Controls.Add(this.txtBxEPS);
+            this.Controls.Add(this.txtBxTelefono);
+            this.Controls.Add(this.txtBxBarrio);
+            this.Controls.Add(this.txtBxDireccion);
+            this.Controls.Add(this.txtBxHijos);
+            this.Controls.Add(this.txtBxEdad);
+            this.Controls.Add(this.txtBxPermanencia);
+            this.Controls.Add(this.txtBxNumeroIdentificacion);
+            this.Controls.Add(this.txtBxApellido);
+            this.Controls.Add(this.txtBxNombre);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label20);
@@ -804,6 +838,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pctrBxHospital)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -833,28 +869,28 @@
         private Label label20;
         private Label label21;
         private Label label22;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox5;
-        private TextBox textBox7;
-        private TextBox textBox8;
-        private TextBox textBox9;
-        private TextBox textBox10;
-        private TextBox textBox11;
-        private TextBox textBox13;
-        private TextBox textBox14;
-        private TextBox textBox15;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
-        private ComboBox comboBox3;
-        private ComboBox comboBox4;
-        private ComboBox comboBox5;
-        private ComboBox comboBox6;
+        private TextBox txtBxNombre;
+        private TextBox txtBxApellido;
+        private TextBox txtBxNumeroIdentificacion;
+        private TextBox txtBxPermanencia;
+        private TextBox txtBxEdad;
+        private TextBox txtBxHijos;
+        private TextBox txtBxDireccion;
+        private TextBox txtBxBarrio;
+        private TextBox txtBxTelefono;
+        private TextBox txtBxEPS;
+        private TextBox txtBxEmail;
+        private TextBox txtBxEmergencia;
+        private ComboBox cmbBxIdentificacion;
+        private ComboBox cmbBxGenero;
+        private ComboBox cmbBxEstadoCivil;
+        private ComboBox cmbBxEscolaridad;
+        private ComboBox cmbBxRegimen;
+        private ComboBox cmbBxConvenio;
         private DataGridView dataGridView1;
-        private DateTimePicker dateTimePicker1;
-        private ComboBox comboBox7;
-        private CheckedListBox checkedListBox1;
+        private DateTimePicker dtTmPckrNacimiento;
+        private ComboBox cmbBxOcupacion;
+        private CheckedListBox chckdLstBxAntecedentes;
         private ToolStrip toolStrip1;
         private ToolStripLabel toolStripLabel1;
         private ToolStripLabel toolStripLabel2;
@@ -864,8 +900,10 @@
         private Label label23;
         private Panel panel1;
         private PictureBox pctrBxHospital;
-        private ComboBox comboBox8;
+        private ComboBox cmbBxPais;
         private ToolStripLabel toolStripLabel4;
         private ToolStripLabel toolStripLabel5;
+        private Panel panel3;
+        private Label label24;
     }
 }

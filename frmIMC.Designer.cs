@@ -74,6 +74,7 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.LightGray;
+            this.textBox1.ForeColor = System.Drawing.Color.Black;
             this.textBox1.Location = new System.Drawing.Point(564, 201);
             this.textBox1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.textBox1.Name = "textBox1";
@@ -146,6 +147,7 @@
             // 
             this.listBox1.BackColor = System.Drawing.Color.Gray;
             this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox1.ForeColor = System.Drawing.Color.White;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 30;
             this.listBox1.Location = new System.Drawing.Point(454, 458);
@@ -158,6 +160,7 @@
             // 
             this.listBox2.BackColor = System.Drawing.Color.Gray;
             this.listBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox2.ForeColor = System.Drawing.Color.White;
             this.listBox2.FormattingEnabled = true;
             this.listBox2.ItemHeight = 30;
             this.listBox2.Location = new System.Drawing.Point(947, 458);

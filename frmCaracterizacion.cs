@@ -113,73 +113,73 @@ private void toolStripLabel1_Click(object sender, EventArgs e)
 
             //Creamos el objeto de la clase lista
             ClsLista miCaracterizacion = new ClsLista();
-            miCaracterizacion.Nombrescompletos = textBox1.Text;
-            miCaracterizacion.Apellidoscompletos = textBox2.Text;
-            miCaracterizacion.Tipoidentificacion = comboBox1.SelectedItem.ToString();
-            miCaracterizacion.Numeroidentificacion = textBox3.Text;
-            miCaracterizacion.Paisorigen = comboBox8.Text;
-            miCaracterizacion.Tiempopermanencia = int.Parse(textBox5.Text);
-            miCaracterizacion.Genero = comboBox2.SelectedItem.ToString();
-            miCaracterizacion.Fechanacimiento = dateTimePicker1.Text;
-            miCaracterizacion.Edad = int.Parse(textBox7.Text);
-            miCaracterizacion.Estadocivil = comboBox3.SelectedItem.ToString();
-            miCaracterizacion.Numerohijos = int.Parse(textBox8.Text);
-            miCaracterizacion.Direccionresidencia = textBox9.Text;
-            miCaracterizacion.Barrioresidencia = textBox10.Text;
-            miCaracterizacion.Telefonocontacto = int.Parse(textBox11.Text);
-            miCaracterizacion.Ocupacion = comboBox7.Text;
-            miCaracterizacion.Nivelescolaridad = comboBox4.SelectedItem.ToString();
-            miCaracterizacion.Eps = textBox13.Text;
-            miCaracterizacion.Regimen = comboBox5.SelectedItem.ToString();
-            miCaracterizacion.Email = textBox14.Text;
-            miCaracterizacion.Contactoemergencia = int.Parse(textBox15.Text);
+            miCaracterizacion.Nombrescompletos = txtBxNombre.Text;
+            miCaracterizacion.Apellidoscompletos = txtBxApellido.Text;
+            miCaracterizacion.Tipoidentificacion = cmbBxIdentificacion.SelectedItem.ToString();
+            miCaracterizacion.Numeroidentificacion = txtBxNumeroIdentificacion.Text;
+            miCaracterizacion.Paisorigen = cmbBxPais.Text;
+            miCaracterizacion.Genero = cmbBxGenero.SelectedItem.ToString();
+            miCaracterizacion.Fechanacimiento = dtTmPckrNacimiento.Text;
+            miCaracterizacion.Edad = int.Parse(txtBxEdad.Text);
+            miCaracterizacion.Estadocivil = cmbBxEstadoCivil.SelectedItem.ToString();
+            miCaracterizacion.Numerohijos = int.Parse(txtBxHijos.Text);
+            miCaracterizacion.Direccionresidencia = txtBxDireccion.Text;
+            miCaracterizacion.Barrioresidencia = txtBxBarrio.Text;
+            miCaracterizacion.Tiempopermanencia = int.Parse(txtBxPermanencia.Text);
+            miCaracterizacion.Telefonocontacto = int.Parse(txtBxTelefono.Text);
+            miCaracterizacion.Ocupacion = cmbBxOcupacion.Text;
+            miCaracterizacion.Nivelescolaridad = cmbBxEscolaridad.SelectedItem.ToString();
+            miCaracterizacion.Eps = txtBxEPS.Text;
+            miCaracterizacion.Regimen = cmbBxRegimen.SelectedItem.ToString();
+            miCaracterizacion.Email = txtBxEmail.Text;
+            miCaracterizacion.Contactoemergencia = int.Parse(txtBxEmergencia.Text);
             miCaracterizacion.Antecedentesmedicos = label21.Text;
-            miCaracterizacion.Convenio = comboBox6.SelectedItem.ToString();
+            miCaracterizacion.Convenio = cmbBxConvenio.SelectedItem.ToString();
 
             MiLista.Add(miCaracterizacion);
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = MiLista;
             LimpiarControles();
-            textBox1.Focus();
+            txtBxNombre.Focus();
             toolStripLabel2.Enabled = true;
 
         }
         //Metodo para limpiar los controles
         private void LimpiarControles()
         {
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Clear();
-            comboBox8.SelectedIndex = 0;
-            textBox5.Clear();
-            textBox7.Clear();
-            textBox8.Clear();
-            textBox9.Clear();
-            textBox10.Clear();
-            textBox11.Clear();
-            comboBox7.SelectedIndex = 0;
-            textBox13.Clear();
-            textBox14.Clear();
-            textBox15.Clear();
-            checkedListBox1.SelectedIndex = 0;
-            comboBox1.SelectedIndex = 0;
-            comboBox2.SelectedIndex = 0;
-            comboBox3.SelectedIndex = 0;
-            comboBox4.SelectedIndex = 0;
-            comboBox5.SelectedIndex = 0;
-            comboBox6.SelectedIndex = 0;
+            txtBxNombre.Clear();
+            txtBxApellido.Clear();
+            txtBxNumeroIdentificacion.Clear();
+            cmbBxPais.SelectedIndex = 0;
+            txtBxPermanencia.Clear();
+            txtBxEdad.Clear();
+            txtBxHijos.Clear();
+            txtBxDireccion.Clear();
+            txtBxBarrio.Clear();
+            txtBxTelefono.Clear();
+            cmbBxOcupacion.SelectedIndex = 0;
+            txtBxEPS.Clear();
+            txtBxEmail.Clear();
+            txtBxEmergencia.Clear();
+            chckdLstBxAntecedentes.SelectedIndex = 0;
+            cmbBxIdentificacion.SelectedIndex = 0;
+            cmbBxGenero.SelectedIndex = 0;
+            cmbBxEstadoCivil.SelectedIndex = 0;
+            cmbBxEscolaridad.SelectedIndex = 0;
+            cmbBxRegimen.SelectedIndex = 0;
+            cmbBxConvenio.SelectedIndex = 0;
         }
         //Validar Convenio
         private bool ValidarConvenio()
         {
-            if (string.IsNullOrEmpty(comboBox6.Text))
+            if (string.IsNullOrEmpty(cmbBxConvenio.Text))
             {
-                errorProvider1.SetError(comboBox6, "Debe seleccionar un convenio");
+                errorProvider1.SetError(cmbBxConvenio, "Debe seleccionar un convenio");
                 return false;
             }
             else
             {
-                errorProvider1.SetError(comboBox6, "");
+                errorProvider1.SetError(cmbBxConvenio, "");
                 return true;
             }
         }
@@ -187,14 +187,14 @@ private void toolStripLabel1_Click(object sender, EventArgs e)
         //Validar Antecedentes médicos
         private bool ValidarAntecedentes()
         {
-            if (string.IsNullOrEmpty(checkedListBox1.Text))
+            if (string.IsNullOrEmpty(chckdLstBxAntecedentes.Text))
             {
-                errorProvider1.SetError(checkedListBox1, "Debe ingresar los antecedentes médicos");
+                errorProvider1.SetError(chckdLstBxAntecedentes, "Debe ingresar los antecedentes médicos");
                 return false;
             }
             else
             {
-                errorProvider1.SetError(checkedListBox1, "");
+                errorProvider1.SetError(chckdLstBxAntecedentes, "");
                 return true;
             }
         }
@@ -202,16 +202,16 @@ private void toolStripLabel1_Click(object sender, EventArgs e)
         private bool ValidarContactoEmer()
         {
             int Telcontactoemer;
-            if (!int.TryParse(textBox15.Text, out Telcontactoemer) || textBox15.Text == "")
+            if (!int.TryParse(txtBxEmergencia.Text, out Telcontactoemer) || txtBxEmergencia.Text == "")
             {
-                errorProvider1.SetError(textBox15, "Debe ingresar un valor numerico para el teléfono de contacto de emergencia");
-                textBox15.Clear();
-                textBox15.Focus();
+                errorProvider1.SetError(txtBxEmergencia, "Debe ingresar un valor numerico para el teléfono de contacto de emergencia");
+                txtBxEmergencia.Clear();
+                txtBxEmergencia.Focus();
                 return false;
             }
             else
             {
-                errorProvider1.SetError(textBox15, "");
+                errorProvider1.SetError(txtBxEmergencia, "");
                 return true;
             }
         }
@@ -219,14 +219,14 @@ private void toolStripLabel1_Click(object sender, EventArgs e)
         //Validar Email
         private bool ValidarEmail()
         {
-            if (string.IsNullOrEmpty(textBox14.Text))
+            if (string.IsNullOrEmpty(txtBxEmail.Text))
             {
-                errorProvider1.SetError(textBox14, "Debe ingresar el Email");
+                errorProvider1.SetError(txtBxEmail, "Debe ingresar el Email");
                 return false;
             }
             else
             {
-                errorProvider1.SetError(textBox14, "");
+                errorProvider1.SetError(txtBxEmail, "");
                 return true;
             }
         }
@@ -234,14 +234,14 @@ private void toolStripLabel1_Click(object sender, EventArgs e)
         //Validar Régimen
         private bool ValidarRegimen()
         {
-            if (string.IsNullOrEmpty(comboBox5.Text))
+            if (string.IsNullOrEmpty(cmbBxRegimen.Text))
             {
-                errorProvider1.SetError(comboBox5, "Debe seleccionar un régimen");
+                errorProvider1.SetError(cmbBxRegimen, "Debe seleccionar un régimen");
                 return false;
             }
             else
             {
-                errorProvider1.SetError(comboBox5, "");
+                errorProvider1.SetError(cmbBxRegimen, "");
                 return true;
             }
         }
@@ -249,14 +249,14 @@ private void toolStripLabel1_Click(object sender, EventArgs e)
         //Validar La EPS
         private bool ValidarEps()
         {
-            if (string.IsNullOrEmpty(textBox13.Text))
+            if (string.IsNullOrEmpty(txtBxEPS.Text))
             {
-                errorProvider1.SetError(textBox13, "Debe ingresar la EPS");
+                errorProvider1.SetError(txtBxEPS, "Debe ingresar la EPS");
                 return false;
             }
             else
             {
-                errorProvider1.SetError(textBox13, "");
+                errorProvider1.SetError(txtBxEPS, "");
                 return true;
             }
         }
@@ -264,14 +264,14 @@ private void toolStripLabel1_Click(object sender, EventArgs e)
         //Validar el nivel de escolaridad
         private bool ValidarNivelescolaridad()
         {
-            if (string.IsNullOrEmpty(comboBox4.Text))
+            if (string.IsNullOrEmpty(cmbBxEscolaridad.Text))
             {
-                errorProvider1.SetError(comboBox4, "Debe seleccionar un nivel de escolaridad");
+                errorProvider1.SetError(cmbBxEscolaridad, "Debe seleccionar un nivel de escolaridad");
                 return false;
             }
             else
             {
-                errorProvider1.SetError(comboBox4, "");
+                errorProvider1.SetError(cmbBxEscolaridad, "");
                 return true;
             }
         }
@@ -279,14 +279,14 @@ private void toolStripLabel1_Click(object sender, EventArgs e)
         //Validar la Ocupación
         private bool ValidarOcupacion()
         {
-            if (string.IsNullOrEmpty(comboBox7.Text))
+            if (string.IsNullOrEmpty(cmbBxOcupacion.Text))
             {
-                errorProvider1.SetError(comboBox7, "Debe ingresar la ocupación");
+                errorProvider1.SetError(cmbBxOcupacion, "Debe ingresar la ocupación");
                 return false;
             }
             else
             {
-                errorProvider1.SetError(comboBox7, "");
+                errorProvider1.SetError(cmbBxOcupacion, "");
                 return true;
             }
         }
@@ -295,16 +295,16 @@ private void toolStripLabel1_Click(object sender, EventArgs e)
         private bool ValidarTelefonocontacto()
         {
             int Telcontacto;
-            if (!int.TryParse(textBox11.Text, out Telcontacto) || textBox11.Text == "")
+            if (!int.TryParse(txtBxTelefono.Text, out Telcontacto) || txtBxTelefono.Text == "")
             {
-                errorProvider1.SetError(textBox11, "Debe ingresar un valor numerico para el teléfono de contacto");
-                textBox11.Clear();
-                textBox11.Focus();
+                errorProvider1.SetError(txtBxTelefono, "Debe ingresar un valor numerico para el teléfono de contacto");
+                txtBxTelefono.Clear();
+                txtBxTelefono.Focus();
                 return false;
             }
             else
             {
-                errorProvider1.SetError(textBox11, "");
+                errorProvider1.SetError(txtBxTelefono, "");
                 return true;
             }
         }
@@ -312,14 +312,14 @@ private void toolStripLabel1_Click(object sender, EventArgs e)
         //Validar Barrio
         private bool ValidarBarrio()
         {
-            if (string.IsNullOrEmpty(textBox10.Text))
+            if (string.IsNullOrEmpty(txtBxBarrio.Text))
             {
-                errorProvider1.SetError(textBox10, "Debe ingresar el barrio de residencia");
+                errorProvider1.SetError(txtBxBarrio, "Debe ingresar el barrio de residencia");
                 return false;
             }
             else
             {
-                errorProvider1.SetError(textBox10, "");
+                errorProvider1.SetError(txtBxBarrio, "");
                 return true;
             }
         }
@@ -327,14 +327,14 @@ private void toolStripLabel1_Click(object sender, EventArgs e)
         //Validar Dirección de Residencia
         private bool ValidarDireccion()
         {
-            if (string.IsNullOrEmpty(textBox9.Text))
+            if (string.IsNullOrEmpty(txtBxDireccion.Text))
             {
-                errorProvider1.SetError(textBox9, "Debe ingresar la dirección de residencia");
+                errorProvider1.SetError(txtBxDireccion, "Debe ingresar la dirección de residencia");
                 return false;
             }
             else
             {
-                errorProvider1.SetError(textBox9, "");
+                errorProvider1.SetError(txtBxDireccion, "");
                 return true;
             }
         }
@@ -343,16 +343,16 @@ private void toolStripLabel1_Click(object sender, EventArgs e)
         private bool ValidarNumerohijos()
         {
             int Hijos;
-            if (!int.TryParse(textBox8.Text, out Hijos) || textBox8.Text == "")
+            if (!int.TryParse(txtBxHijos.Text, out Hijos) || txtBxHijos.Text == "")
             {
-                errorProvider1.SetError(textBox8, "Debe ingresar un valor numerico para el numero de hijos");
-                textBox8.Clear();
-                textBox8.Focus();
+                errorProvider1.SetError(txtBxHijos, "Debe ingresar un valor numerico para el numero de hijos");
+                txtBxHijos.Clear();
+                txtBxHijos.Focus();
                 return false;
             }
             else
             {
-                errorProvider1.SetError(textBox8, "");
+                errorProvider1.SetError(txtBxHijos, "");
                 return true;
             }
         }
@@ -360,14 +360,14 @@ private void toolStripLabel1_Click(object sender, EventArgs e)
         //Validar Estado Civil
         private bool ValidarEstadocivil()
         {
-            if (string.IsNullOrEmpty(comboBox3.Text))
+            if (string.IsNullOrEmpty(cmbBxEstadoCivil.Text))
             {
-                errorProvider1.SetError(comboBox3, "Debe seleccionar un tipo de Estado Civil");
+                errorProvider1.SetError(cmbBxEstadoCivil, "Debe seleccionar un tipo de Estado Civil");
                 return false;
             }
             else
             {
-                errorProvider1.SetError(comboBox3, "");
+                errorProvider1.SetError(cmbBxEstadoCivil, "");
                 return true;
             }
         }
@@ -376,16 +376,16 @@ private void toolStripLabel1_Click(object sender, EventArgs e)
         private bool ValidarEdad()
         {
             int Edad;
-            if (!int.TryParse(textBox7.Text, out Edad) || textBox7.Text == "")
+            if (!int.TryParse(txtBxEdad.Text, out Edad) || txtBxEdad.Text == "")
             {
-                errorProvider1.SetError(textBox7, "Debe ingresar un valor numerico para la edad");
-                textBox7.Clear();
-                textBox7.Focus();
+                errorProvider1.SetError(txtBxEdad, "Debe ingresar un valor numerico para la edad");
+                txtBxEdad.Clear();
+                txtBxEdad.Focus();
                 return false;
             }
             else
             {
-                errorProvider1.SetError(textBox7, "");
+                errorProvider1.SetError(txtBxEdad, "");
                 return true;
             }
         }
@@ -393,14 +393,14 @@ private void toolStripLabel1_Click(object sender, EventArgs e)
         //Validar Fecha de Nacimiento
         private bool ValidarFechanacimiento()
         {
-            if (string.IsNullOrEmpty(dateTimePicker1.Text))
+            if (string.IsNullOrEmpty(dtTmPckrNacimiento.Text))
             {
-                errorProvider1.SetError(dateTimePicker1, "Debe ingresar la fecha de Nacimiento");
+                errorProvider1.SetError(dtTmPckrNacimiento, "Debe ingresar la fecha de Nacimiento");
                 return false;
             }
             else
             {
-                errorProvider1.SetError(dateTimePicker1, "");
+                errorProvider1.SetError(dtTmPckrNacimiento, "");
                 return true;
             }
         }
@@ -408,14 +408,14 @@ private void toolStripLabel1_Click(object sender, EventArgs e)
         //Validar Género
         private bool ValidarGenero()
         {
-            if (string.IsNullOrEmpty(comboBox2.Text))
+            if (string.IsNullOrEmpty(cmbBxGenero.Text))
             {
-                errorProvider1.SetError(comboBox2, "Debe seleccionar un tipo de Género");
+                errorProvider1.SetError(cmbBxGenero, "Debe seleccionar un tipo de Género");
                 return false;
             }
             else
             {
-                errorProvider1.SetError(comboBox2, "");
+                errorProvider1.SetError(cmbBxGenero, "");
                 return true;
             }
         }
@@ -424,16 +424,16 @@ private void toolStripLabel1_Click(object sender, EventArgs e)
         private bool ValidarTiempopermanencia()
         {
             int Tiempoper;
-            if(!int.TryParse(textBox5.Text, out Tiempoper)||textBox5.Text=="")
+            if(!int.TryParse(txtBxPermanencia.Text, out Tiempoper)||txtBxPermanencia.Text=="")
             {
-                errorProvider1.SetError(textBox5, "Debe ingresar un valor numerico para el tiempo de permanencia");
-                textBox5.Clear();
-                textBox5.Focus();
+                errorProvider1.SetError(txtBxPermanencia, "Debe ingresar un valor numerico para el tiempo de permanencia");
+                txtBxPermanencia.Clear();
+                txtBxPermanencia.Focus();
                 return false;
             }
             else
             {
-                errorProvider1.SetError(textBox5, "");
+                errorProvider1.SetError(txtBxPermanencia, "");
                 return true;
             }
         }
@@ -441,14 +441,14 @@ private void toolStripLabel1_Click(object sender, EventArgs e)
         //Validar País de Origen
         private bool ValidarPaisorigen()
         {
-            if (string.IsNullOrEmpty(comboBox8.Text))
+            if (string.IsNullOrEmpty(cmbBxPais.Text))
             {
-                errorProvider1.SetError(comboBox8, "Debe ingresar el País de Origen");
+                errorProvider1.SetError(cmbBxPais, "Debe ingresar el País de Origen");
                 return false;
             }
             else
             {
-                errorProvider1.SetError(comboBox8, "");
+                errorProvider1.SetError(cmbBxPais, "");
                 return true;
             }
         }
@@ -456,14 +456,14 @@ private void toolStripLabel1_Click(object sender, EventArgs e)
         //Validar Numero de Identificación
         private bool ValidarNumeroidentificacion()
         {
-            if (string.IsNullOrEmpty(textBox3.Text))
+            if (string.IsNullOrEmpty(txtBxNumeroIdentificacion.Text))
             {
-                errorProvider1.SetError(textBox3, "Debe ingresar el Numero de identificación");
+                errorProvider1.SetError(txtBxNumeroIdentificacion, "Debe ingresar el Numero de identificación");
                 return false;
             }
             else
             {
-                errorProvider1.SetError(textBox3, "");
+                errorProvider1.SetError(txtBxNumeroIdentificacion, "");
                 return true;
             }
         }
@@ -471,14 +471,14 @@ private void toolStripLabel1_Click(object sender, EventArgs e)
         //Validar Tipo de Identificación
         private bool ValidarTipoidentificacion()
         {
-            if(string.IsNullOrEmpty(comboBox1.Text))
+            if(string.IsNullOrEmpty(cmbBxIdentificacion.Text))
             {
-                errorProvider1.SetError(comboBox1, "Debe seleccionar un tipo de identificación");
+                errorProvider1.SetError(cmbBxIdentificacion, "Debe seleccionar un tipo de identificación");
                 return false;
             }
             else
             {
-                errorProvider1.SetError(comboBox1, "");
+                errorProvider1.SetError(cmbBxIdentificacion, "");
                 return true;
             }
         }
@@ -486,14 +486,14 @@ private void toolStripLabel1_Click(object sender, EventArgs e)
         //Validar Apellido
         private bool ValidarApellido()
         {
-            if(string.IsNullOrEmpty(textBox2.Text))
+            if(string.IsNullOrEmpty(txtBxApellido.Text))
             {
-                errorProvider1.SetError(textBox2, "Debe ingresar un Apellido");
+                errorProvider1.SetError(txtBxApellido, "Debe ingresar un Apellido");
                 return false;
             }
             else
             {
-                errorProvider1.SetError(textBox2, "");
+                errorProvider1.SetError(txtBxApellido, "");
                 return true;
             }
         }
@@ -501,14 +501,14 @@ private void toolStripLabel1_Click(object sender, EventArgs e)
         // Validar el Nombre
         private bool ValidarNombre()
         {
-            if(string.IsNullOrEmpty(textBox1.Text))
+            if(string.IsNullOrEmpty(txtBxNombre.Text))
             {
-                errorProvider1.SetError(textBox1, "Debe ingresar un Nombre");
+                errorProvider1.SetError(txtBxNombre, "Debe ingresar un Nombre");
                 return false;
             }
             else
             {
-                errorProvider1.SetError(textBox1, "");
+                errorProvider1.SetError(txtBxNombre, "");
                 return true;
             }
         }
@@ -521,39 +521,39 @@ private void toolStripLabel1_Click(object sender, EventArgs e)
             {
                 return;
             }
-            ClsLista miCaracterizacion = GetCaracterizacion(textBox1.Text);
+            ClsLista miCaracterizacion = GetCaracterizacion(txtBxNombre.Text);
             if (miCaracterizacion == null)
             {
-                errorProvider1.SetError(textBox1, "El nombre no se encuentra registrado en la lista");
+                errorProvider1.SetError(txtBxNombre, "El nombre no se encuentra registrado en la lista");
                 LimpiarControles();
-                textBox1.Focus();
+                txtBxNombre.Focus();
                 return;
             }
             else
             {
-                errorProvider1.SetError(textBox1, "");
-                textBox1.Text = miCaracterizacion.Nombrescompletos;
-                textBox2.Text = miCaracterizacion.Apellidoscompletos;
-                textBox3.Text = miCaracterizacion.Numeroidentificacion;
-                comboBox8.Text = miCaracterizacion.Paisorigen;
-                textBox5.Text = miCaracterizacion.Tiempopermanencia.ToString();
-                dateTimePicker1.Text = miCaracterizacion.Fechanacimiento;
-                textBox7.Text = miCaracterizacion.Edad.ToString();
-                textBox8.Text = miCaracterizacion.Numerohijos.ToString();
-                textBox9.Text = miCaracterizacion.Direccionresidencia;
-                textBox10.Text = miCaracterizacion.Barrioresidencia;
-                textBox11.Text = miCaracterizacion.Telefonocontacto.ToString();
-                comboBox7.Text = miCaracterizacion.Ocupacion;
-                textBox13.Text = miCaracterizacion.Eps;
-                textBox14.Text = miCaracterizacion.Email;
-                textBox15.Text = miCaracterizacion.Contactoemergencia.ToString();
-                checkedListBox1.Text = miCaracterizacion.Antecedentesmedicos;
-                comboBox1.SelectedItem = miCaracterizacion.Tipoidentificacion;
-                comboBox2.SelectedItem = miCaracterizacion.Genero;
-                comboBox3.SelectedItem = miCaracterizacion.Estadocivil;
-                comboBox4.SelectedItem = miCaracterizacion.Nivelescolaridad;
-                comboBox5.SelectedItem = miCaracterizacion.Regimen;
-                comboBox6.SelectedItem = miCaracterizacion.Convenio;
+                errorProvider1.SetError(txtBxNombre, "");
+                txtBxNombre.Text = miCaracterizacion.Nombrescompletos;
+                txtBxApellido.Text = miCaracterizacion.Apellidoscompletos;
+                txtBxNumeroIdentificacion.Text = miCaracterizacion.Numeroidentificacion;
+                cmbBxPais.Text = miCaracterizacion.Paisorigen;
+                txtBxPermanencia.Text = miCaracterizacion.Tiempopermanencia.ToString();
+                dtTmPckrNacimiento.Text = miCaracterizacion.Fechanacimiento;
+                txtBxEdad.Text = miCaracterizacion.Edad.ToString();
+                txtBxHijos.Text = miCaracterizacion.Numerohijos.ToString();
+                txtBxDireccion.Text = miCaracterizacion.Direccionresidencia;
+                txtBxBarrio.Text = miCaracterizacion.Barrioresidencia;
+                txtBxTelefono.Text = miCaracterizacion.Telefonocontacto.ToString();
+                cmbBxOcupacion.Text = miCaracterizacion.Ocupacion;
+                txtBxEPS.Text = miCaracterizacion.Eps;
+                txtBxEmail.Text = miCaracterizacion.Email;
+                txtBxEmergencia.Text = miCaracterizacion.Contactoemergencia.ToString();
+                chckdLstBxAntecedentes.Text = miCaracterizacion.Antecedentesmedicos;
+                cmbBxIdentificacion.SelectedItem = miCaracterizacion.Tipoidentificacion;
+                cmbBxGenero.SelectedItem = miCaracterizacion.Genero;
+                cmbBxEstadoCivil.SelectedItem = miCaracterizacion.Estadocivil;
+                cmbBxEscolaridad.SelectedItem = miCaracterizacion.Nivelescolaridad;
+                cmbBxRegimen.SelectedItem = miCaracterizacion.Regimen;
+                cmbBxConvenio.SelectedItem = miCaracterizacion.Convenio;
                 toolStripLabel3.Enabled = true;
             }
 
@@ -568,23 +568,23 @@ private void toolStripLabel1_Click(object sender, EventArgs e)
         private void toolStripLabel3_Click(object sender, EventArgs e)
         {
 
-            if (textBox1.Text == "")
+            if (txtBxNombre.Text == "")
             {
-                errorProvider1.SetError(textBox1, "Debe consultar la persona a eliminar");
+                errorProvider1.SetError(txtBxNombre, "Debe consultar la persona a eliminar");
                 LimpiarControles();
-                textBox1.Focus();
+                txtBxNombre.Focus();
                 toolStripLabel3.Enabled = false;
                 return;
             }
             else
             {
-                errorProvider1.SetError(textBox1, "");
-                DialogResult Respuesta = MessageBox.Show("¿Está seguro de eleminar el registro?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                errorProvider1.SetError(txtBxNombre, "");
+                DialogResult Respuesta = MessageBox.Show("¿Está seguro de eliminar el registro?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
                 if (Respuesta == DialogResult.Yes)
                 {
                     foreach (ClsLista miCaracterizacion in MiLista)
                     {
-                        if (miCaracterizacion.Nombrescompletos == textBox1.Text)
+                        if (miCaracterizacion.Nombrescompletos == txtBxNombre.Text)
                         {
                             MiLista.Remove(miCaracterizacion);
                             break;
@@ -608,5 +608,7 @@ private void toolStripLabel1_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
+       
     }
 }

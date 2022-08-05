@@ -106,15 +106,17 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.textBox1.ForeColor = System.Drawing.Color.White;
             this.textBox1.Location = new System.Drawing.Point(875, 146);
             this.textBox1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(101, 37);
+            this.textBox1.Size = new System.Drawing.Size(114, 37);
             this.textBox1.TabIndex = 6;
             // 
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.textBox2.ForeColor = System.Drawing.Color.White;
             this.textBox2.Location = new System.Drawing.Point(1287, 146);
             this.textBox2.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.textBox2.Name = "textBox2";
@@ -127,7 +129,7 @@
             this.textBox3.Location = new System.Drawing.Point(437, 143);
             this.textBox3.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(101, 37);
+            this.textBox3.Size = new System.Drawing.Size(121, 37);
             this.textBox3.TabIndex = 8;
             // 
             // button1
@@ -174,7 +176,8 @@
             // 
             // listBox1
             // 
-            this.listBox1.BackColor = System.Drawing.Color.LightGray;
+            this.listBox1.BackColor = System.Drawing.Color.DarkGray;
+            this.listBox1.ForeColor = System.Drawing.Color.White;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 30;
             this.listBox1.Location = new System.Drawing.Point(351, 593);
@@ -369,6 +372,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ForeColor = System.Drawing.Color.White;
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "frmCalorias";
             this.Text = "frmCalorias";
