@@ -20,25 +20,23 @@ namespace ÁREA_NUTRICIONAL_HOSPITAL_SAN_ISIDRO_PEREIRA
         private void button1_Click(object sender, EventArgs e)
         {
             frmCaracterizacion Form = new frmCaracterizacion();
+            this.Hide();
             Form.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             frmIMC Form = new frmIMC();
+            this.Hide();
             Form.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             frmCalorias Form = new frmCalorias();
-            Form.ShowDialog();
             this.Hide();
+            Form.ShowDialog();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
     }
 }

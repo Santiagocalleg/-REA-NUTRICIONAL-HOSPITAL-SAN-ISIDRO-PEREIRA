@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicio));
             this.txtBxUsuario = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtBxContraseña = new System.Windows.Forms.TextBox();
             this.bttnIngresar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pctrBxHospital = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lnkLblOlvidoContraseña = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -57,18 +57,18 @@
             this.txtBxUsuario.Size = new System.Drawing.Size(278, 37);
             this.txtBxUsuario.TabIndex = 2;
             // 
-            // textBox2
+            // txtBxContraseña
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.ForeColor = System.Drawing.Color.Gray;
-            this.textBox2.Location = new System.Drawing.Point(474, 145);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(278, 37);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.UseSystemPasswordChar = true;
+            this.txtBxContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.txtBxContraseña.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBxContraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtBxContraseña.ForeColor = System.Drawing.Color.Gray;
+            this.txtBxContraseña.Location = new System.Drawing.Point(474, 145);
+            this.txtBxContraseña.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBxContraseña.Name = "txtBxContraseña";
+            this.txtBxContraseña.Size = new System.Drawing.Size(278, 37);
+            this.txtBxContraseña.TabIndex = 3;
+            this.txtBxContraseña.UseSystemPasswordChar = true;
             // 
             // bttnIngresar
             // 
@@ -131,19 +131,19 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "LOGIN";
             // 
-            // linkLabel1
+            // lnkLblOlvidoContraseña
             // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.linkLabel1.LinkColor = System.Drawing.Color.DimGray;
-            this.linkLabel1.Location = new System.Drawing.Point(353, 279);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(325, 30);
-            this.linkLabel1.TabIndex = 11;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Haz olvidado contraseña?";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.lnkLblOlvidoContraseña.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.lnkLblOlvidoContraseña.AutoSize = true;
+            this.lnkLblOlvidoContraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lnkLblOlvidoContraseña.LinkColor = System.Drawing.Color.DimGray;
+            this.lnkLblOlvidoContraseña.Location = new System.Drawing.Point(353, 279);
+            this.lnkLblOlvidoContraseña.Name = "lnkLblOlvidoContraseña";
+            this.lnkLblOlvidoContraseña.Size = new System.Drawing.Size(325, 30);
+            this.lnkLblOlvidoContraseña.TabIndex = 11;
+            this.lnkLblOlvidoContraseña.TabStop = true;
+            this.lnkLblOlvidoContraseña.Text = "Haz olvidado contraseña?";
+            this.lnkLblOlvidoContraseña.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // pictureBox1
             // 
@@ -188,11 +188,11 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.lnkLblOlvidoContraseña);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bttnIngresar);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtBxContraseña);
             this.Controls.Add(this.txtBxUsuario);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -211,13 +211,13 @@
 
         #endregion
         private TextBox txtBxUsuario;
-        private TextBox textBox2;
+        private TextBox txtBxContraseña;
         private Button bttnIngresar;
         private Label label1;
         private PictureBox pctrBxHospital;
         private Panel panel1;
         private Label label2;
-        private LinkLabel linkLabel1;
+        private LinkLabel lnkLblOlvidoContraseña;
         private PictureBox pictureBox1;
         private Label label3;
         private Label label4;

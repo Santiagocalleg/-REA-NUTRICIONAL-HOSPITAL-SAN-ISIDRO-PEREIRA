@@ -29,64 +29,64 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOpciones));
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.bttnCaracterizacion = new System.Windows.Forms.Button();
+            this.bttnIMC = new System.Windows.Forms.Button();
+            this.bttnCalorias = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pctrBxHospital = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctrBxHospital)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // bttnCaracterizacion
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(299, 41);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(464, 95);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Caracterización";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.bttnCaracterizacion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bttnCaracterizacion.BackgroundImage")));
+            this.bttnCaracterizacion.FlatAppearance.BorderSize = 0;
+            this.bttnCaracterizacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttnCaracterizacion.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bttnCaracterizacion.ForeColor = System.Drawing.Color.White;
+            this.bttnCaracterizacion.Location = new System.Drawing.Point(299, 41);
+            this.bttnCaracterizacion.Margin = new System.Windows.Forms.Padding(4);
+            this.bttnCaracterizacion.Name = "bttnCaracterizacion";
+            this.bttnCaracterizacion.Size = new System.Drawing.Size(464, 95);
+            this.bttnCaracterizacion.TabIndex = 0;
+            this.bttnCaracterizacion.Text = "Caracterización";
+            this.bttnCaracterizacion.UseVisualStyleBackColor = true;
+            this.bttnCaracterizacion.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // bttnIMC
             // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(299, 180);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(464, 95);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Evaluación IMC";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.bttnIMC.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bttnIMC.BackgroundImage")));
+            this.bttnIMC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.bttnIMC.FlatAppearance.BorderSize = 0;
+            this.bttnIMC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttnIMC.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bttnIMC.ForeColor = System.Drawing.Color.White;
+            this.bttnIMC.Location = new System.Drawing.Point(299, 180);
+            this.bttnIMC.Margin = new System.Windows.Forms.Padding(4);
+            this.bttnIMC.Name = "bttnIMC";
+            this.bttnIMC.Size = new System.Drawing.Size(464, 95);
+            this.bttnIMC.TabIndex = 1;
+            this.bttnIMC.Text = "Evaluación IMC";
+            this.bttnIMC.UseVisualStyleBackColor = true;
+            this.bttnIMC.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // bttnCalorias
             // 
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(299, 324);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(464, 95);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Evaluación Calorias";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.bttnCalorias.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bttnCalorias.BackgroundImage")));
+            this.bttnCalorias.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.bttnCalorias.FlatAppearance.BorderSize = 0;
+            this.bttnCalorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttnCalorias.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bttnCalorias.ForeColor = System.Drawing.Color.White;
+            this.bttnCalorias.Location = new System.Drawing.Point(299, 324);
+            this.bttnCalorias.Margin = new System.Windows.Forms.Padding(4);
+            this.bttnCalorias.Name = "bttnCalorias";
+            this.bttnCalorias.Size = new System.Drawing.Size(464, 95);
+            this.bttnCalorias.TabIndex = 2;
+            this.bttnCalorias.Text = "Evaluación Calorias";
+            this.bttnCalorias.UseVisualStyleBackColor = true;
+            this.bttnCalorias.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel1
             // 
@@ -119,9 +119,9 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(812, 459);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.bttnCalorias);
+            this.Controls.Add(this.bttnIMC);
+            this.Controls.Add(this.bttnCaracterizacion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -139,9 +139,9 @@
 
         #endregion
 
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button bttnCaracterizacion;
+        private Button bttnIMC;
+        private Button bttnCalorias;
         private Panel panel1;
         private PictureBox pctrBxHospital;
     }

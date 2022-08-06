@@ -81,7 +81,7 @@ namespace ÁREA_NUTRICIONAL_HOSPITAL_SAN_ISIDRO_PEREIRA
                 Resultado = ((10 * Peso) + (6.25 * Altura) - (5 * Edad) - 161) * 1.9;
             }
 
-            listBox1.Items.Add(Resultado);
+            listBox1.Items.Add("El consumo minimo de calorias debe ser: "+(Math.Round (Resultado)));
 
 
         }

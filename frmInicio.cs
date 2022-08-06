@@ -2,21 +2,17 @@ namespace ÁREA_NUTRICIONAL_HOSPITAL_SAN_ISIDRO_PEREIRA
 {
     public partial class frmInicio : Form
     {
-        string Usuario = "Santiago.calleg";
+        string Usuario = "adm";
         string Contraseña = "1234";
         public frmInicio()
         {
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(txtBxUsuario.Text !=Usuario || textBox2.Text !=Contraseña)
+            if(txtBxUsuario.Text !=Usuario || txtBxContraseña.Text !=Contraseña)
             {
                 if(txtBxUsuario.Text !=Usuario)
                 {
@@ -25,11 +21,11 @@ namespace ÁREA_NUTRICIONAL_HOSPITAL_SAN_ISIDRO_PEREIRA
                     txtBxUsuario.Focus();
                     return;
                 }
-                if(textBox2.Text !=Contraseña)
+                if(txtBxContraseña.Text !=Contraseña)
                 {
                     MessageBox.Show("Contraseña Incorrecta");
-                    textBox2.Clear();
-                    textBox2.Focus();
+                    txtBxContraseña.Clear();
+                    txtBxContraseña.Focus();
                     return;
                 }
            
@@ -37,7 +33,7 @@ namespace ÁREA_NUTRICIONAL_HOSPITAL_SAN_ISIDRO_PEREIRA
             else
             {
                 txtBxUsuario.Clear();
-                textBox2.Clear();
+                txtBxContraseña.Clear();
                 frmOpciones Form = new frmOpciones();
                 this.Hide();
                 Form.ShowDialog();

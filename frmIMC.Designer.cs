@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIMC));
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.lblPeso = new System.Windows.Forms.Label();
+            this.lblEstatura = new System.Windows.Forms.Label();
+            this.txtBxPeso = new System.Windows.Forms.TextBox();
+            this.txtBxEstatura = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.lstBxNutricion = new System.Windows.Forms.ListBox();
+            this.lstBxIMC = new System.Windows.Forms.ListBox();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pctrBxHospital = new System.Windows.Forms.PictureBox();
@@ -49,46 +49,46 @@
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // lblPeso
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(327, 204);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 30);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Ingresar Peso";
+            this.lblPeso.AutoSize = true;
+            this.lblPeso.ForeColor = System.Drawing.Color.White;
+            this.lblPeso.Location = new System.Drawing.Point(327, 204);
+            this.lblPeso.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblPeso.Name = "lblPeso";
+            this.lblPeso.Size = new System.Drawing.Size(169, 30);
+            this.lblPeso.TabIndex = 0;
+            this.lblPeso.Text = "Ingresar Peso";
             // 
-            // label2
+            // lblEstatura
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(322, 276);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(206, 30);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Ingresar Estatura";
+            this.lblEstatura.AutoSize = true;
+            this.lblEstatura.ForeColor = System.Drawing.Color.White;
+            this.lblEstatura.Location = new System.Drawing.Point(322, 276);
+            this.lblEstatura.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblEstatura.Name = "lblEstatura";
+            this.lblEstatura.Size = new System.Drawing.Size(206, 30);
+            this.lblEstatura.TabIndex = 1;
+            this.lblEstatura.Text = "Ingresar Estatura";
             // 
-            // textBox1
+            // txtBxPeso
             // 
-            this.textBox1.BackColor = System.Drawing.Color.LightGray;
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(564, 201);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(215, 37);
-            this.textBox1.TabIndex = 2;
+            this.txtBxPeso.BackColor = System.Drawing.Color.LightGray;
+            this.txtBxPeso.ForeColor = System.Drawing.Color.Black;
+            this.txtBxPeso.Location = new System.Drawing.Point(564, 201);
+            this.txtBxPeso.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtBxPeso.Name = "txtBxPeso";
+            this.txtBxPeso.Size = new System.Drawing.Size(215, 37);
+            this.txtBxPeso.TabIndex = 2;
             // 
-            // textBox2
+            // txtBxEstatura
             // 
-            this.textBox2.BackColor = System.Drawing.Color.LightGray;
-            this.textBox2.Location = new System.Drawing.Point(564, 273);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(215, 37);
-            this.textBox2.TabIndex = 3;
+            this.txtBxEstatura.BackColor = System.Drawing.Color.LightGray;
+            this.txtBxEstatura.Location = new System.Drawing.Point(564, 273);
+            this.txtBxEstatura.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtBxEstatura.Name = "txtBxEstatura";
+            this.txtBxEstatura.Size = new System.Drawing.Size(215, 37);
+            this.txtBxEstatura.TabIndex = 3;
             // 
             // button1
             // 
@@ -107,15 +107,15 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.DarkCyan;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(1220, 606);
             this.button2.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(165, 43);
             this.button2.TabIndex = 5;
-            this.button2.Text = "Cancelar";
+            this.button2.Text = "Salir";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -143,38 +143,38 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "IMC";
             // 
-            // listBox1
+            // lstBxNutricion
             // 
-            this.listBox1.BackColor = System.Drawing.Color.Gray;
-            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox1.ForeColor = System.Drawing.Color.White;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 30;
-            this.listBox1.Location = new System.Drawing.Point(454, 458);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(360, 90);
-            this.listBox1.TabIndex = 9;
+            this.lstBxNutricion.BackColor = System.Drawing.Color.Gray;
+            this.lstBxNutricion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lstBxNutricion.ForeColor = System.Drawing.Color.White;
+            this.lstBxNutricion.FormattingEnabled = true;
+            this.lstBxNutricion.ItemHeight = 30;
+            this.lstBxNutricion.Location = new System.Drawing.Point(454, 458);
+            this.lstBxNutricion.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.lstBxNutricion.Name = "lstBxNutricion";
+            this.lstBxNutricion.Size = new System.Drawing.Size(360, 90);
+            this.lstBxNutricion.TabIndex = 9;
             // 
-            // listBox2
+            // lstBxIMC
             // 
-            this.listBox2.BackColor = System.Drawing.Color.Gray;
-            this.listBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox2.ForeColor = System.Drawing.Color.White;
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 30;
-            this.listBox2.Location = new System.Drawing.Point(947, 458);
-            this.listBox2.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(360, 90);
-            this.listBox2.TabIndex = 10;
+            this.lstBxIMC.BackColor = System.Drawing.Color.Gray;
+            this.lstBxIMC.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lstBxIMC.ForeColor = System.Drawing.Color.White;
+            this.lstBxIMC.FormattingEnabled = true;
+            this.lstBxIMC.ItemHeight = 30;
+            this.lstBxIMC.Location = new System.Drawing.Point(947, 458);
+            this.lstBxIMC.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.lstBxIMC.Name = "lstBxIMC";
+            this.lstBxIMC.Size = new System.Drawing.Size(360, 90);
+            this.lstBxIMC.TabIndex = 10;
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.DarkCyan;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(313, 100);
             this.button3.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
@@ -243,16 +243,16 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.lstBxIMC);
+            this.Controls.Add(this.lstBxNutricion);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtBxEstatura);
+            this.Controls.Add(this.txtBxPeso);
+            this.Controls.Add(this.lblEstatura);
+            this.Controls.Add(this.lblPeso);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "frmIMC";
@@ -269,16 +269,16 @@
 
         #endregion
 
-        private Label label1;
-        private Label label2;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private Label lblPeso;
+        private Label lblEstatura;
+        private TextBox txtBxPeso;
+        private TextBox txtBxEstatura;
         private Button button1;
         private Button button2;
         private Label label3;
         private Label label4;
-        private ListBox listBox1;
-        private ListBox listBox2;
+        private ListBox lstBxNutricion;
+        private ListBox lstBxIMC;
         private Button button3;
         private Panel panel1;
         private PictureBox pctrBxHospital;

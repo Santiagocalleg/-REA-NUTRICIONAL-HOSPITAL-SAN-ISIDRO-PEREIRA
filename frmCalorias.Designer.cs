@@ -126,6 +126,7 @@
             // textBox3
             // 
             this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.textBox3.ForeColor = System.Drawing.Color.White;
             this.textBox3.Location = new System.Drawing.Point(437, 143);
             this.textBox3.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.textBox3.Name = "textBox3";
@@ -151,12 +152,12 @@
             this.button2.BackColor = System.Drawing.Color.DarkCyan;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(801, 481);
+            this.button2.Location = new System.Drawing.Point(1209, 481);
             this.button2.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(165, 43);
             this.button2.TabIndex = 11;
-            this.button2.Text = "Cancelar";
+            this.button2.Text = "Salir";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -165,7 +166,7 @@
             this.button3.BackColor = System.Drawing.Color.DarkCyan;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(1175, 481);
+            this.button3.Location = new System.Drawing.Point(824, 481);
             this.button3.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(165, 43);
