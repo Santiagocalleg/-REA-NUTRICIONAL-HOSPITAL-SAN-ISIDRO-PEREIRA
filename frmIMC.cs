@@ -17,7 +17,7 @@ namespace ÁREA_NUTRICIONAL_HOSPITAL_SAN_ISIDRO_PEREIRA
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void bttncalcular_Click(object sender, EventArgs e)
         {
             double imc, peso, altura;
             peso = double.Parse(txtBxPeso.Text);
@@ -66,12 +66,12 @@ namespace ÁREA_NUTRICIONAL_HOSPITAL_SAN_ISIDRO_PEREIRA
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void bttnsalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void bttnregresar_Click(object sender, EventArgs e)
         {
             this.Hide(); // Ocultar el formulario activo
             frmOpciones frm = new frmOpciones(); 

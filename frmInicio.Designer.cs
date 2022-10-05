@@ -34,15 +34,15 @@
             this.bttnIngresar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pctrBxHospital = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.pnlfondohs = new System.Windows.Forms.Panel();
+            this.lbltitulo = new System.Windows.Forms.Label();
             this.lnkLblOlvidoContraseña = new System.Windows.Forms.LinkLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.pctrBxcerrar = new System.Windows.Forms.PictureBox();
+            this.lblusuario = new System.Windows.Forms.Label();
+            this.lblcontra = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pctrBxHospital)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlfondohs.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctrBxcerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // txtBxUsuario
@@ -86,17 +86,8 @@
             this.bttnIngresar.TabIndex = 4;
             this.bttnIngresar.Text = "ACCEDER";
             this.bttnIngresar.UseVisualStyleBackColor = false;
-            this.bttnIngresar.Click += new System.EventHandler(this.button1_Click);
+            this.bttnIngresar.Click += new System.EventHandler(this.bttnIngresar_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Registro";
             // 
             // pctrBxHospital
             // 
@@ -110,26 +101,26 @@
             this.pctrBxHospital.TabIndex = 8;
             this.pctrBxHospital.TabStop = false;
             // 
-            // panel1
+            // pnlfondohs
             // 
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.Controls.Add(this.pctrBxHospital);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 330);
-            this.panel1.TabIndex = 9;
+            this.pnlfondohs.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlfondohs.BackgroundImage")));
+            this.pnlfondohs.Controls.Add(this.pctrBxHospital);
+            this.pnlfondohs.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlfondohs.Location = new System.Drawing.Point(0, 0);
+            this.pnlfondohs.Name = "pnlfondohs";
+            this.pnlfondohs.Size = new System.Drawing.Size(250, 330);
+            this.pnlfondohs.TabIndex = 9;
             // 
-            // label2
+            // lbltitulo
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(437, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(151, 49);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "LOGIN";
+            this.lbltitulo.AutoSize = true;
+            this.lbltitulo.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbltitulo.ForeColor = System.Drawing.Color.Gray;
+            this.lbltitulo.Location = new System.Drawing.Point(437, 9);
+            this.lbltitulo.Name = "lbltitulo";
+            this.lbltitulo.Size = new System.Drawing.Size(151, 49);
+            this.lbltitulo.TabIndex = 10;
+            this.lbltitulo.Text = "LOGIN";
             // 
             // lnkLblOlvidoContraseña
             // 
@@ -143,40 +134,40 @@
             this.lnkLblOlvidoContraseña.TabIndex = 11;
             this.lnkLblOlvidoContraseña.TabStop = true;
             this.lnkLblOlvidoContraseña.Text = "Haz olvidado contraseña?";
-            this.lnkLblOlvidoContraseña.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.lnkLblOlvidoContraseña.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkLblOlvidoContraseña_LinkClicked);
             // 
-            // pictureBox1
+            // pctrBxcerrar
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(747, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pctrBxcerrar.Image = ((System.Drawing.Image)(resources.GetObject("pctrBxcerrar.Image")));
+            this.pctrBxcerrar.Location = new System.Drawing.Point(747, 12);
+            this.pctrBxcerrar.Name = "pctrBxcerrar";
+            this.pctrBxcerrar.Size = new System.Drawing.Size(15, 15);
+            this.pctrBxcerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctrBxcerrar.TabIndex = 12;
+            this.pctrBxcerrar.TabStop = false;
+            this.pctrBxcerrar.Click += new System.EventHandler(this.pctrBxcerrar_Click);
             // 
-            // label3
+            // lblusuario
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(293, 95);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 30);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "USUARIO";
+            this.lblusuario.AutoSize = true;
+            this.lblusuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblusuario.ForeColor = System.Drawing.Color.Gray;
+            this.lblusuario.Location = new System.Drawing.Point(293, 95);
+            this.lblusuario.Name = "lblusuario";
+            this.lblusuario.Size = new System.Drawing.Size(116, 30);
+            this.lblusuario.TabIndex = 13;
+            this.lblusuario.Text = "USUARIO";
             // 
-            // label4
+            // lblcontra
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(273, 145);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(175, 30);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "CONTRASEÑA";
+            this.lblcontra.AutoSize = true;
+            this.lblcontra.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblcontra.ForeColor = System.Drawing.Color.Gray;
+            this.lblcontra.Location = new System.Drawing.Point(273, 145);
+            this.lblcontra.Name = "lblcontra";
+            this.lblcontra.Size = new System.Drawing.Size(175, 30);
+            this.lblcontra.TabIndex = 14;
+            this.lblcontra.Text = "CONTRASEÑA";
             // 
             // frmInicio
             // 
@@ -185,12 +176,12 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(774, 330);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lblcontra);
+            this.Controls.Add(this.lblusuario);
+            this.Controls.Add(this.pctrBxcerrar);
             this.Controls.Add(this.lnkLblOlvidoContraseña);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.lbltitulo);
+            this.Controls.Add(this.pnlfondohs);
             this.Controls.Add(this.bttnIngresar);
             this.Controls.Add(this.txtBxContraseña);
             this.Controls.Add(this.txtBxUsuario);
@@ -202,8 +193,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio de Sesion";
             ((System.ComponentModel.ISupportInitialize)(this.pctrBxHospital)).EndInit();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlfondohs.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pctrBxcerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,11 +206,11 @@
         private Button bttnIngresar;
         private Label label1;
         private PictureBox pctrBxHospital;
-        private Panel panel1;
-        private Label label2;
+        private Panel pnlfondohs;
+        private Label lbltitulo;
         private LinkLabel lnkLblOlvidoContraseña;
-        private PictureBox pictureBox1;
-        private Label label3;
-        private Label label4;
+        private PictureBox pctrBxcerrar;
+        private Label lblusuario;
+        private Label lblcontra;
     }
 }

@@ -16,10 +16,10 @@ namespace ÁREA_NUTRICIONAL_HOSPITAL_SAN_ISIDRO_PEREIRA
         public frmCaracterizacion()
         {
             InitializeComponent();
-            toolStripLabel2.Enabled = false;
-            toolStripLabel3.Enabled = false;
+            tlStrpLblConsultar.Enabled = false;
+            tlStrpLbleliminar.Enabled = false;
         }
-private void toolStripLabel1_Click(object sender, EventArgs e)
+private void tlStrpLblRegistrar_Click(object sender, EventArgs e)
         {
 
             if (ValidarNombre() == false)
@@ -129,19 +129,19 @@ private void toolStripLabel1_Click(object sender, EventArgs e)
             miCaracterizacion.Telefonocontacto = int.Parse(txtBxTelefono.Text);
             miCaracterizacion.Ocupacion = cmbBxOcupacion.Text;
             miCaracterizacion.Nivelescolaridad = cmbBxEscolaridad.SelectedItem.ToString();
-            miCaracterizacion.Eps = txtBxEPS.Text;
+            miCaracterizacion.Eps = cmbBxEPS.SelectedItem.ToString();
             miCaracterizacion.Regimen = cmbBxRegimen.SelectedItem.ToString();
             miCaracterizacion.Email = txtBxEmail.Text;
             miCaracterizacion.Contactoemergencia = int.Parse(txtBxEmergencia.Text);
-            miCaracterizacion.Antecedentesmedicos = label21.Text;
+            miCaracterizacion.Antecedentesmedicos = lblantecedentes.Text;
             miCaracterizacion.Convenio = cmbBxConvenio.SelectedItem.ToString();
 
             MiLista.Add(miCaracterizacion);
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = MiLista;
+            dtGrdVwvisualizacion.DataSource = null;
+            dtGrdVwvisualizacion.DataSource = MiLista;
             LimpiarControles();
             txtBxNombre.Focus();
-            toolStripLabel2.Enabled = true;
+            tlStrpLblConsultar.Enabled = true;
 
         }
         //Metodo para limpiar los controles
@@ -158,7 +158,7 @@ private void toolStripLabel1_Click(object sender, EventArgs e)
             txtBxBarrio.Clear();
             txtBxTelefono.Clear();
             cmbBxOcupacion.SelectedIndex = 0;
-            txtBxEPS.Clear();
+            cmbBxEPS.SelectedIndex = 0;
             txtBxEmail.Clear();
             txtBxEmergencia.Clear();
             chckdLstBxAntecedentes.SelectedIndex = 0;
@@ -249,14 +249,14 @@ private void toolStripLabel1_Click(object sender, EventArgs e)
         //Validar La EPS
         private bool ValidarEps()
         {
-            if (string.IsNullOrEmpty(txtBxEPS.Text))
+            if (string.IsNullOrEmpty(cmbBxEPS.Text))
             {
-                errorProvider1.SetError(txtBxEPS, "Debe ingresar la EPS");
+                errorProvider1.SetError(cmbBxEPS, "Debe seleccionar una EPS");
                 return false;
             }
             else
             {
-                errorProvider1.SetError(txtBxEPS, "");
+                errorProvider1.SetError(cmbBxEPS, "");
                 return true;
             }
         }
@@ -515,7 +515,7 @@ private void toolStripLabel1_Click(object sender, EventArgs e)
 
 
 
-        private void toolStripLabel2_Click(object sender, EventArgs e)
+        private void tlStrpLblConsultar_Click(object sender, EventArgs e)
         {
             if (ValidarNombre()==false)
             {
@@ -544,7 +544,7 @@ private void toolStripLabel1_Click(object sender, EventArgs e)
                 txtBxBarrio.Text = miCaracterizacion.Barrioresidencia;
                 txtBxTelefono.Text = miCaracterizacion.Telefonocontacto.ToString();
                 cmbBxOcupacion.Text = miCaracterizacion.Ocupacion;
-                txtBxEPS.Text = miCaracterizacion.Eps;
+                cmbBxEPS.Text = miCaracterizacion.Eps;
                 txtBxEmail.Text = miCaracterizacion.Email;
                 txtBxEmergencia.Text = miCaracterizacion.Contactoemergencia.ToString();
                 chckdLstBxAntecedentes.Text = miCaracterizacion.Antecedentesmedicos;
@@ -554,7 +554,7 @@ private void toolStripLabel1_Click(object sender, EventArgs e)
                 cmbBxEscolaridad.SelectedItem = miCaracterizacion.Nivelescolaridad;
                 cmbBxRegimen.SelectedItem = miCaracterizacion.Regimen;
                 cmbBxConvenio.SelectedItem = miCaracterizacion.Convenio;
-                toolStripLabel3.Enabled = true;
+                tlStrpLbleliminar.Enabled = true;
             }
 
         }
@@ -565,7 +565,7 @@ private void toolStripLabel1_Click(object sender, EventArgs e)
         }
 
 
-        private void toolStripLabel3_Click(object sender, EventArgs e)
+        private void tlStrpLbleliminar_Click(object sender, EventArgs e)
         {
 
             if (txtBxNombre.Text == "")
@@ -573,7 +573,7 @@ private void toolStripLabel1_Click(object sender, EventArgs e)
                 errorProvider1.SetError(txtBxNombre, "Debe consultar la persona a eliminar");
                 LimpiarControles();
                 txtBxNombre.Focus();
-                toolStripLabel3.Enabled = false;
+                tlStrpLbleliminar.Enabled = false;
                 return;
             }
             else
@@ -591,20 +591,20 @@ private void toolStripLabel1_Click(object sender, EventArgs e)
                         }
                     }
                     LimpiarControles();
-                    dataGridView1.DataSource = null;
-                    dataGridView1.DataSource = MiLista;
+                    dtGrdVwvisualizacion.DataSource = null;
+                    dtGrdVwvisualizacion.DataSource = MiLista;
                 }
             }
         }
 
-        private void toolStripLabel4_Click(object sender, EventArgs e)
+        private void tlStrpLblregresar_Click(object sender, EventArgs e)
         {
             this.Hide(); // Ocultar el formulario activo
             frmOpciones frm = new frmOpciones();
             frm.Show();
         }
 
-        private void toolStripLabel5_Click(object sender, EventArgs e)
+        private void tlStrpLblsalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
