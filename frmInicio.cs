@@ -10,7 +10,7 @@ namespace ÁREA_NUTRICIONAL_HOSPITAL_SAN_ISIDRO_PEREIRA
         }
 
 
-        private void button1_Click(object sender, EventArgs e)
+        private void bttnIngresar_Click(object sender, EventArgs e)
         {
             if(txtBxUsuario.Text !=Usuario || txtBxContraseña.Text !=Contraseña)
             {
@@ -42,14 +42,14 @@ namespace ÁREA_NUTRICIONAL_HOSPITAL_SAN_ISIDRO_PEREIRA
             
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void pctrBxcerrar_Click(object sender, EventArgs e)
         {
             
              Application.Exit();
            
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void lnkLblOlvidoContraseña_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             MessageBox.Show("Contactese con soporte técnico");
         }

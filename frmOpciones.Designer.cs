@@ -52,7 +52,7 @@
             this.bttnCaracterizacion.TabIndex = 0;
             this.bttnCaracterizacion.Text = "Caracterización";
             this.bttnCaracterizacion.UseVisualStyleBackColor = true;
-            this.bttnCaracterizacion.Click += new System.EventHandler(this.button1_Click);
+            this.bttnCaracterizacion.Click += new System.EventHandler(this.bttnCaracterizacion_Click);
             // 
             // bttnIMC
             // 
@@ -69,7 +69,7 @@
             this.bttnIMC.TabIndex = 1;
             this.bttnIMC.Text = "Evaluación IMC";
             this.bttnIMC.UseVisualStyleBackColor = true;
-            this.bttnIMC.Click += new System.EventHandler(this.button2_Click);
+            this.bttnIMC.Click += new System.EventHandler(this.bttnIMC_Click);
             // 
             // bttnCalorias
             // 
@@ -86,7 +86,7 @@
             this.bttnCalorias.TabIndex = 2;
             this.bttnCalorias.Text = "Evaluación Calorias";
             this.bttnCalorias.UseVisualStyleBackColor = true;
-            this.bttnCalorias.Click += new System.EventHandler(this.button3_Click);
+            this.bttnCalorias.Click += new System.EventHandler(this.bttnCalorias_Click);
             // 
             // panel1
             // 

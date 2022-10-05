@@ -33,20 +33,20 @@
             this.lblEstatura = new System.Windows.Forms.Label();
             this.txtBxPeso = new System.Windows.Forms.TextBox();
             this.txtBxEstatura = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.bttncalcular = new System.Windows.Forms.Button();
+            this.bttnsalir = new System.Windows.Forms.Button();
+            this.lblnutricion = new System.Windows.Forms.Label();
+            this.lblimc = new System.Windows.Forms.Label();
             this.lstBxNutricion = new System.Windows.Forms.ListBox();
             this.lstBxIMC = new System.Windows.Forms.ListBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.bttnregresar = new System.Windows.Forms.Button();
+            this.pnlfondohs = new System.Windows.Forms.Panel();
             this.pctrBxHospital = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.pnlfondo = new System.Windows.Forms.Panel();
+            this.lbltitulo = new System.Windows.Forms.Label();
+            this.pnlfondohs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctrBxHospital)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.pnlfondo.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblPeso
@@ -80,6 +80,7 @@
             this.txtBxPeso.Name = "txtBxPeso";
             this.txtBxPeso.Size = new System.Drawing.Size(215, 37);
             this.txtBxPeso.TabIndex = 2;
+            this.txtBxPeso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBxPeso_KeyPress);
             // 
             // txtBxEstatura
             // 
@@ -89,59 +90,60 @@
             this.txtBxEstatura.Name = "txtBxEstatura";
             this.txtBxEstatura.Size = new System.Drawing.Size(215, 37);
             this.txtBxEstatura.TabIndex = 3;
+            this.txtBxEstatura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBxEstatura_KeyPress);
             // 
-            // button1
+            // bttncalcular
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkCyan;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(856, 217);
-            this.button1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(189, 74);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Calcular";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.bttncalcular.BackColor = System.Drawing.Color.DarkCyan;
+            this.bttncalcular.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bttncalcular.ForeColor = System.Drawing.Color.White;
+            this.bttncalcular.Location = new System.Drawing.Point(856, 217);
+            this.bttncalcular.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.bttncalcular.Name = "bttncalcular";
+            this.bttncalcular.Size = new System.Drawing.Size(189, 74);
+            this.bttncalcular.TabIndex = 4;
+            this.bttncalcular.Text = "Calcular";
+            this.bttncalcular.UseVisualStyleBackColor = false;
+            this.bttncalcular.Click += new System.EventHandler(this.bttncalcular_Click);
             // 
-            // button2
+            // bttnsalir
             // 
-            this.button2.BackColor = System.Drawing.Color.DarkCyan;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(1220, 606);
-            this.button2.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(165, 43);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Salir";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.bttnsalir.BackColor = System.Drawing.Color.DarkCyan;
+            this.bttnsalir.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.bttnsalir.FlatAppearance.BorderSize = 0;
+            this.bttnsalir.ForeColor = System.Drawing.Color.White;
+            this.bttnsalir.Location = new System.Drawing.Point(1220, 606);
+            this.bttnsalir.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.bttnsalir.Name = "bttnsalir";
+            this.bttnsalir.Size = new System.Drawing.Size(165, 43);
+            this.bttnsalir.TabIndex = 5;
+            this.bttnsalir.Text = "Salir";
+            this.bttnsalir.UseVisualStyleBackColor = false;
+            this.bttnsalir.Click += new System.EventHandler(this.bttnsalir_Click);
             // 
-            // label3
+            // lblnutricion
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(500, 413);
-            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(263, 34);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Estado Nutricional";
+            this.lblnutricion.AutoSize = true;
+            this.lblnutricion.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblnutricion.ForeColor = System.Drawing.Color.White;
+            this.lblnutricion.Location = new System.Drawing.Point(500, 413);
+            this.lblnutricion.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblnutricion.Name = "lblnutricion";
+            this.lblnutricion.Size = new System.Drawing.Size(263, 34);
+            this.lblnutricion.TabIndex = 6;
+            this.lblnutricion.Text = "Estado Nutricional";
             // 
-            // label4
+            // lblimc
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(1107, 413);
-            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 34);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "IMC";
+            this.lblimc.AutoSize = true;
+            this.lblimc.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblimc.ForeColor = System.Drawing.Color.White;
+            this.lblimc.Location = new System.Drawing.Point(1107, 413);
+            this.lblimc.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblimc.Name = "lblimc";
+            this.lblimc.Size = new System.Drawing.Size(69, 34);
+            this.lblimc.TabIndex = 8;
+            this.lblimc.Text = "IMC";
             // 
             // lstBxNutricion
             // 
@@ -169,34 +171,34 @@
             this.lstBxIMC.Size = new System.Drawing.Size(360, 90);
             this.lstBxIMC.TabIndex = 10;
             // 
-            // button3
+            // bttnregresar
             // 
-            this.button3.BackColor = System.Drawing.Color.DarkCyan;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(313, 100);
-            this.button3.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(165, 43);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "Regresar";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.bttnregresar.BackColor = System.Drawing.Color.DarkCyan;
+            this.bttnregresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.bttnregresar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.bttnregresar.FlatAppearance.BorderSize = 0;
+            this.bttnregresar.ForeColor = System.Drawing.Color.White;
+            this.bttnregresar.Location = new System.Drawing.Point(313, 100);
+            this.bttnregresar.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.bttnregresar.Name = "bttnregresar";
+            this.bttnregresar.Size = new System.Drawing.Size(165, 43);
+            this.bttnregresar.TabIndex = 11;
+            this.bttnregresar.Text = "Regresar";
+            this.bttnregresar.UseVisualStyleBackColor = false;
+            this.bttnregresar.Click += new System.EventHandler(this.bttnregresar_Click);
             // 
-            // panel1
+            // pnlfondohs
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.pctrBxHospital);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(312, 674);
-            this.panel1.TabIndex = 50;
+            this.pnlfondohs.BackColor = System.Drawing.Color.Transparent;
+            this.pnlfondohs.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlfondohs.BackgroundImage")));
+            this.pnlfondohs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlfondohs.Controls.Add(this.pctrBxHospital);
+            this.pnlfondohs.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlfondohs.Location = new System.Drawing.Point(0, 0);
+            this.pnlfondohs.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlfondohs.Name = "pnlfondohs";
+            this.pnlfondohs.Size = new System.Drawing.Size(312, 674);
+            this.pnlfondohs.TabIndex = 50;
             // 
             // pctrBxHospital
             // 
@@ -211,27 +213,27 @@
             this.pctrBxHospital.TabIndex = 8;
             this.pctrBxHospital.TabStop = false;
             // 
-            // panel2
+            // pnlfondo
             // 
-            this.panel2.BackColor = System.Drawing.Color.DarkCyan;
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Location = new System.Drawing.Point(313, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1085, 100);
-            this.panel2.TabIndex = 51;
+            this.pnlfondo.BackColor = System.Drawing.Color.DarkCyan;
+            this.pnlfondo.Controls.Add(this.lbltitulo);
+            this.pnlfondo.Location = new System.Drawing.Point(313, 0);
+            this.pnlfondo.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlfondo.Name = "pnlfondo";
+            this.pnlfondo.Size = new System.Drawing.Size(1085, 100);
+            this.pnlfondo.TabIndex = 51;
             // 
-            // label5
+            // lbltitulo
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(7, 18);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(1070, 61);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "CALCULO DEL INDICE DE MASA CORPORAL";
+            this.lbltitulo.AutoSize = true;
+            this.lbltitulo.Font = new System.Drawing.Font("Century Gothic", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbltitulo.ForeColor = System.Drawing.Color.White;
+            this.lbltitulo.Location = new System.Drawing.Point(7, 18);
+            this.lbltitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbltitulo.Name = "lbltitulo";
+            this.lbltitulo.Size = new System.Drawing.Size(1070, 61);
+            this.lbltitulo.TabIndex = 0;
+            this.lbltitulo.Text = "CALCULO DEL INDICE DE MASA CORPORAL";
             // 
             // frmIMC
             // 
@@ -240,15 +242,15 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1400, 674);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.pnlfondo);
+            this.Controls.Add(this.pnlfondohs);
+            this.Controls.Add(this.bttnregresar);
             this.Controls.Add(this.lstBxIMC);
             this.Controls.Add(this.lstBxNutricion);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lblimc);
+            this.Controls.Add(this.lblnutricion);
+            this.Controls.Add(this.bttnsalir);
+            this.Controls.Add(this.bttncalcular);
             this.Controls.Add(this.txtBxEstatura);
             this.Controls.Add(this.txtBxPeso);
             this.Controls.Add(this.lblEstatura);
@@ -258,10 +260,10 @@
             this.Name = "frmIMC";
             this.ShowIcon = false;
             this.Text = "INDICE DE MASA CORPORAL";
-            this.panel1.ResumeLayout(false);
+            this.pnlfondohs.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pctrBxHospital)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pnlfondo.ResumeLayout(false);
+            this.pnlfondo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,16 +275,16 @@
         private Label lblEstatura;
         private TextBox txtBxPeso;
         private TextBox txtBxEstatura;
-        private Button button1;
-        private Button button2;
-        private Label label3;
-        private Label label4;
+        private Button bttncalcular;
+        private Button bttnsalir;
+        private Label lblnutricion;
+        private Label lblimc;
         private ListBox lstBxNutricion;
         private ListBox lstBxIMC;
-        private Button button3;
-        private Panel panel1;
+        private Button bttnregresar;
+        private Panel pnlfondohs;
         private PictureBox pctrBxHospital;
-        private Panel panel2;
-        private Label label5;
+        private Panel pnlfondo;
+        private Label lbltitulo;
     }
 }
