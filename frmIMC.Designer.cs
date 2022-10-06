@@ -80,7 +80,6 @@
             this.txtBxPeso.Name = "txtBxPeso";
             this.txtBxPeso.Size = new System.Drawing.Size(215, 37);
             this.txtBxPeso.TabIndex = 2;
-            this.txtBxPeso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBxPeso_KeyPress);
             // 
             // txtBxEstatura
             // 
@@ -90,7 +89,6 @@
             this.txtBxEstatura.Name = "txtBxEstatura";
             this.txtBxEstatura.Size = new System.Drawing.Size(215, 37);
             this.txtBxEstatura.TabIndex = 3;
-            this.txtBxEstatura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBxEstatura_KeyPress);
             // 
             // bttncalcular
             // 
