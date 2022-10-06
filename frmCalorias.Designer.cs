@@ -112,6 +112,13 @@
             this.txtBxaltura.Name = "txtBxaltura";
             this.txtBxaltura.Size = new System.Drawing.Size(114, 37);
             this.txtBxaltura.TabIndex = 6;
+            this.txtBxaltura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.txtBxaltura.ForeColor = System.Drawing.Color.White;
+            this.txtBxaltura.Location = new System.Drawing.Point(875, 146);
+            this.txtBxaltura.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtBxaltura.Name = "txtBxaltura";
+            this.txtBxaltura.Size = new System.Drawing.Size(114, 37);
+            this.txtBxaltura.TabIndex = 6;
             this.txtBxaltura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBxaltura_KeyPress);
             // 
             // txtBxpeso

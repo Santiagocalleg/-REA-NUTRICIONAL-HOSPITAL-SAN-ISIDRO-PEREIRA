@@ -428,7 +428,23 @@
             this.txtBxTelefono.Name = "txtBxTelefono";
             this.txtBxTelefono.Size = new System.Drawing.Size(313, 37);
             this.txtBxTelefono.TabIndex = 32;
-            this.txtBxTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBxTelefono_KeyPress);
+            // 
+            // txtBxEPS
+            // 
+            this.txtBxEPS.BackColor = System.Drawing.Color.LightGray;
+            this.txtBxEPS.Location = new System.Drawing.Point(552, 887);
+            this.txtBxEPS.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtBxEPS.Name = "txtBxEPS";
+            this.txtBxEPS.Size = new System.Drawing.Size(313, 37);
+            this.txtBxEPS.TabIndex = 34;
+            // 
+            // 
+            this.txtBxEPS.BackColor = System.Drawing.Color.LightGray;
+            this.txtBxEPS.Location = new System.Drawing.Point(552, 887);
+            this.txtBxEPS.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtBxEPS.Name = "txtBxEPS";
+            this.txtBxEPS.Size = new System.Drawing.Size(313, 37);
+            this.txtBxEPS.TabIndex = 34;
             // 
             // txtBxEmail
             // 
@@ -552,15 +568,15 @@
             // 
             // dtGrdVwvisualizacion
             // 
-            this.dtGrdVwvisualizacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtGrdVwvisualizacion.GridColor = System.Drawing.Color.Black;
-            this.dtGrdVwvisualizacion.Location = new System.Drawing.Point(259, 1203);
-            this.dtGrdVwvisualizacion.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.dtGrdVwvisualizacion.Name = "dtGrdVwvisualizacion";
-            this.dtGrdVwvisualizacion.RowHeadersWidth = 51;
-            this.dtGrdVwvisualizacion.RowTemplate.Height = 29;
-            this.dtGrdVwvisualizacion.Size = new System.Drawing.Size(1355, 160);
-            this.dtGrdVwvisualizacion.TabIndex = 44;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.GridColor = System.Drawing.Color.Black;
+            this.dataGridView1.Location = new System.Drawing.Point(269, 1201);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 29;
+            this.dataGridView1.Size = new System.Drawing.Size(1413, 160);
+            this.dataGridView1.TabIndex = 44;
             // 
             // dtTmPckrNacimiento
             // 
@@ -700,19 +716,6 @@
             this.panel1.Size = new System.Drawing.Size(250, 1333);
             this.panel1.TabIndex = 49;
             // 
-            // pnlfondohs
-            // 
-            this.pnlfondohs.BackColor = System.Drawing.Color.Transparent;
-            this.pnlfondohs.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlfondohs.BackgroundImage")));
-            this.pnlfondohs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlfondohs.Controls.Add(this.pctrBxHospital);
-            this.pnlfondohs.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlfondohs.Location = new System.Drawing.Point(0, 0);
-            this.pnlfondohs.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlfondohs.Name = "pnlfondohs";
-            this.pnlfondohs.Size = new System.Drawing.Size(312, 1333);
-            this.pnlfondohs.TabIndex = 51;
-            // 
             // pctrBxHospital
             // 
             this.pctrBxHospital.BackColor = System.Drawing.Color.Transparent;
@@ -743,7 +746,7 @@
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel2.BackColor = System.Drawing.Color.DarkCyan;
             this.panel2.Controls.Add(this.label23);
-            this.panel2.Location = new System.Drawing.Point(2687, 30);
+            this.panel2.Location = new System.Drawing.Point(2830, 30);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1707, 105);
             this.panel2.TabIndex = 50;
@@ -852,8 +855,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.ClientSize = new System.Drawing.Size(1653, 658);
-            this.Controls.Add(this.cmbBxEPS);
+            this.ClientSize = new System.Drawing.Size(1732, 658);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.cmbBxPais);
             this.Controls.Add(this.panel2);
