@@ -1,52 +1,63 @@
+using System.Data.SqlClient;
+
 namespace ÁREA_NUTRICIONAL_HOSPITAL_SAN_ISIDRO_PEREIRA
 {
     public partial class frmInicio : Form
     {
-        string Usuario = "adm";
-        string Contraseña = "1234";
+       
         public frmInicio()
         {
             InitializeComponent();
         }
 
 
+        SqlConnection cone = new SqlConnection("Data Source=(localdb)\\Servidor; Initial Catalog=nutricion");
+
+
         private void bttnIngresar_Click(object sender, EventArgs e)
         {
-            if(txtBxUsuario.Text !=Usuario || txtBxContraseña.Text !=Contraseña)
+            cone.Open();
+
+
+            try
             {
-                if(txtBxUsuario.Text !=Usuario)
+                SqlCommand conn = new SqlCommand("SELECT password FROM usuarios WHERE usuario = @usuario AND estado = @estado", cone);
+                conn.Parameters.AddWithValue("usuario", txtBxUsuario.Text);
+                conn.Parameters.AddWithValue("estado", 1);
+                SqlDataReader response = conn.ExecuteReader();
+
+                if (response.Read())
                 {
-                    MessageBox.Show("Usuario Incorrecto");
-                    txtBxUsuario.Clear();
-                    txtBxUsuario.Focus();
-                    return;
+                    if (txtBxContraseña.Text.Equals(response["password"]))
+                    {
+                        frmOpciones view = new frmOpciones();
+                        view.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Contraseña incorrectos");
+                    }
+
                 }
-                if(txtBxContraseña.Text !=Contraseña)
+                else
                 {
-                    MessageBox.Show("Contraseña Incorrecta");
-                    txtBxContraseña.Clear();
-                    txtBxContraseña.Focus();
-                    return;
+                    MessageBox.Show("Usuario incorrectos");
                 }
-           
             }
-            else
+            catch (Exception ex)
             {
-                txtBxUsuario.Clear();
-                txtBxContraseña.Clear();
-                frmOpciones Form = new frmOpciones();
-                this.Hide();
-                Form.ShowDialog();
-                
+                MessageBox.Show("Error en la base de datos");
             }
-            
+            // Cerrar conexión a base de datos
+            cone.Close();
         }
 
         private void pctrBxcerrar_Click(object sender, EventArgs e)
         {
-            
-             Application.Exit();
-           
+
+            Application.Exit();
+
         }
 
         private void lnkLblOlvidoContraseña_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -54,6 +65,6 @@ namespace ÁREA_NUTRICIONAL_HOSPITAL_SAN_ISIDRO_PEREIRA
             MessageBox.Show("Contactese con soporte técnico");
         }
 
-        
+
     }
 }

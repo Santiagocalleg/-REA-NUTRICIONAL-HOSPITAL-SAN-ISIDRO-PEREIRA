@@ -22,7 +22,7 @@ namespace ÁREA_NUTRICIONAL_HOSPITAL_SAN_ISIDRO_PEREIRA
 
         private void txtBxNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != ' '))
             {
                 MessageBox.Show("Solo se permiten letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
@@ -32,7 +32,7 @@ namespace ÁREA_NUTRICIONAL_HOSPITAL_SAN_ISIDRO_PEREIRA
 
         private void txtBxApellido_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != ' '))
             {
                 MessageBox.Show("Solo se permiten letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
@@ -211,7 +211,7 @@ namespace ÁREA_NUTRICIONAL_HOSPITAL_SAN_ISIDRO_PEREIRA
             miCaracterizacion.Regimen = cmbBxRegimen.SelectedItem.ToString();
             miCaracterizacion.Email = txtBxEmail.Text;
             miCaracterizacion.Contactoemergencia = int.Parse(txtBxEmergencia.Text);
-            miCaracterizacion.Antecedentesmedicos = lblantecedentes.Text;
+            miCaracterizacion.Antecedentesmedicos = txtBxAntecedentes.Text;
             miCaracterizacion.Convenio = cmbBxConvenio.SelectedItem.ToString();
 
             MiLista.Add(miCaracterizacion);
@@ -239,7 +239,7 @@ namespace ÁREA_NUTRICIONAL_HOSPITAL_SAN_ISIDRO_PEREIRA
             cmbBxEPS.SelectedIndex = 0;
             txtBxEmail.Clear();
             txtBxEmergencia.Clear();
-            chckdLstBxAntecedentes.SelectedIndex = 0;
+            txtBxAntecedentes.Clear();
             cmbBxIdentificacion.SelectedIndex = 0;
             cmbBxGenero.SelectedIndex = 0;
             cmbBxEstadoCivil.SelectedIndex = 0;
@@ -265,14 +265,14 @@ namespace ÁREA_NUTRICIONAL_HOSPITAL_SAN_ISIDRO_PEREIRA
         //Validar Antecedentes médicos
         private bool ValidarAntecedentes()
         {
-            if (string.IsNullOrEmpty(chckdLstBxAntecedentes.Text))
+            if (string.IsNullOrEmpty(txtBxAntecedentes.Text))
             {
-                errorProvider1.SetError(chckdLstBxAntecedentes, "Debe ingresar los antecedentes médicos");
+                errorProvider1.SetError(txtBxAntecedentes, "Debe ingresar los antecedentes médicos");
                 return false;
             }
             else
             {
-                errorProvider1.SetError(chckdLstBxAntecedentes, "");
+                errorProvider1.SetError(txtBxAntecedentes, "");
                 return true;
             }
         }
@@ -625,7 +625,7 @@ namespace ÁREA_NUTRICIONAL_HOSPITAL_SAN_ISIDRO_PEREIRA
                 cmbBxEPS.Text = miCaracterizacion.Eps;
                 txtBxEmail.Text = miCaracterizacion.Email;
                 txtBxEmergencia.Text = miCaracterizacion.Contactoemergencia.ToString();
-                chckdLstBxAntecedentes.Text = miCaracterizacion.Antecedentesmedicos;
+                txtBxAntecedentes.Text = miCaracterizacion.Antecedentesmedicos;
                 cmbBxIdentificacion.SelectedItem = miCaracterizacion.Tipoidentificacion;
                 cmbBxGenero.SelectedItem = miCaracterizacion.Genero;
                 cmbBxEstadoCivil.SelectedItem = miCaracterizacion.Estadocivil;

@@ -72,7 +72,6 @@
             this.dtGrdVwvisualizacion = new System.Windows.Forms.DataGridView();
             this.dtTmPckrNacimiento = new System.Windows.Forms.DateTimePicker();
             this.cmbBxOcupacion = new System.Windows.Forms.ComboBox();
-            this.chckdLstBxAntecedentes = new System.Windows.Forms.CheckedListBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tlStrpLblRegistrar = new System.Windows.Forms.ToolStripLabel();
             this.tlStrpLblConsultar = new System.Windows.Forms.ToolStripLabel();
@@ -90,6 +89,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label24 = new System.Windows.Forms.Label();
             this.cmbBxEPS = new System.Windows.Forms.ComboBox();
+            this.txtBxAntecedentes = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtGrdVwvisualizacion)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -554,13 +554,11 @@
             // 
             this.dtGrdVwvisualizacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtGrdVwvisualizacion.GridColor = System.Drawing.Color.Black;
-            this.dtGrdVwvisualizacion.Location = new System.Drawing.Point(259, 1203);
             this.dtGrdVwvisualizacion.Location = new System.Drawing.Point(269, 1201);
             this.dtGrdVwvisualizacion.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.dtGrdVwvisualizacion.Name = "dtGrdVwvisualizacion";
             this.dtGrdVwvisualizacion.RowHeadersWidth = 51;
             this.dtGrdVwvisualizacion.RowTemplate.Height = 29;
-            this.dtGrdVwvisualizacion.Size = new System.Drawing.Size(1355, 160);
             this.dtGrdVwvisualizacion.Size = new System.Drawing.Size(1413, 160);
             this.dtGrdVwvisualizacion.TabIndex = 44;
             // 
@@ -594,40 +592,6 @@
             this.cmbBxOcupacion.Name = "cmbBxOcupacion";
             this.cmbBxOcupacion.Size = new System.Drawing.Size(319, 38);
             this.cmbBxOcupacion.TabIndex = 46;
-            // 
-            // chckdLstBxAntecedentes
-            // 
-            this.chckdLstBxAntecedentes.BackColor = System.Drawing.Color.LightGray;
-            this.chckdLstBxAntecedentes.CheckOnClick = true;
-            this.chckdLstBxAntecedentes.FormattingEnabled = true;
-            this.chckdLstBxAntecedentes.Items.AddRange(new object[] {
-            "Anemia",
-            "Artritis",
-            "Asma",
-            "Cáncer",
-            "Coágulos sanguíneos (por ejemplo, una trombosis)",
-            "Colitis",
-            "Conmoción cerebral",
-            "Depresión",
-            "Diabetes",
-            "Enfermedad cardíaca",
-            "Enfermedades de transmisión sexual (ETS)",
-            "Enfermedad hepática",
-            "Enfermedad pulmonar",
-            "Enfermedad renal",
-            "Hepatitis",
-            "Infección de las vías urinarias",
-            "Migrañas",
-            "Movilidad limitada",
-            "Nivel alto de colesterol",
-            "Presión arterial alta",
-            "Síndrome del intestino irritable",
-            "VIH/SIDA"});
-            this.chckdLstBxAntecedentes.Location = new System.Drawing.Point(586, 1054);
-            this.chckdLstBxAntecedentes.Margin = new System.Windows.Forms.Padding(4);
-            this.chckdLstBxAntecedentes.Name = "chckdLstBxAntecedentes";
-            this.chckdLstBxAntecedentes.Size = new System.Drawing.Size(279, 140);
-            this.chckdLstBxAntecedentes.TabIndex = 47;
             // 
             // toolStrip1
             // 
@@ -699,7 +663,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 30);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 1333);
+            this.panel1.Size = new System.Drawing.Size(250, 1331);
             this.panel1.TabIndex = 49;
             // 
             // pnlfondohs
@@ -712,7 +676,6 @@
             this.pnlfondohs.Location = new System.Drawing.Point(0, 0);
             this.pnlfondohs.Margin = new System.Windows.Forms.Padding(4);
             this.pnlfondohs.Name = "pnlfondohs";
-            this.pnlfondohs.Size = new System.Drawing.Size(312, 1333);
             this.pnlfondohs.Size = new System.Drawing.Size(312, 1331);
             this.pnlfondohs.TabIndex = 51;
             // 
@@ -746,8 +709,7 @@
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel2.BackColor = System.Drawing.Color.DarkCyan;
             this.panel2.Controls.Add(this.label23);
-            this.panel2.Location = new System.Drawing.Point(2687, 30);
-            this.panel2.Location = new System.Drawing.Point(2791, 30);
+            this.panel2.Location = new System.Drawing.Point(2778, 30);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1707, 105);
             this.panel2.TabIndex = 50;
@@ -850,21 +812,29 @@
             this.cmbBxEPS.Size = new System.Drawing.Size(313, 38);
             this.cmbBxEPS.TabIndex = 54;
             // 
+            // txtBxAntecedentes
+            // 
+            this.txtBxAntecedentes.BackColor = System.Drawing.Color.LightGray;
+            this.txtBxAntecedentes.Location = new System.Drawing.Point(552, 1054);
+            this.txtBxAntecedentes.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtBxAntecedentes.Name = "txtBxAntecedentes";
+            this.txtBxAntecedentes.Size = new System.Drawing.Size(313, 37);
+            this.txtBxAntecedentes.TabIndex = 55;
+            // 
             // frmCaracterizacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.ClientSize = new System.Drawing.Size(1653, 658);
             this.ClientSize = new System.Drawing.Size(1732, 658);
+            this.Controls.Add(this.txtBxAntecedentes);
             this.Controls.Add(this.cmbBxEPS);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.cmbBxPais);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.chckdLstBxAntecedentes);
             this.Controls.Add(this.cmbBxOcupacion);
             this.Controls.Add(this.dtTmPckrNacimiento);
             this.Controls.Add(this.dtGrdVwvisualizacion);
@@ -975,7 +945,6 @@
         private DataGridView dtGrdVwvisualizacion;
         private DateTimePicker dtTmPckrNacimiento;
         private ComboBox cmbBxOcupacion;
-        private CheckedListBox chckdLstBxAntecedentes;
         private ToolStrip toolStrip1;
         private ToolStripLabel tlStrpLblRegistrar;
         private ToolStripLabel tlStrpLblConsultar;
@@ -993,5 +962,6 @@
         private Panel pnlfondohs;
         private PictureBox pctrBxHospital;
         private ComboBox cmbBxEPS;
+        private TextBox txtBxAntecedentes;
     }
 }
