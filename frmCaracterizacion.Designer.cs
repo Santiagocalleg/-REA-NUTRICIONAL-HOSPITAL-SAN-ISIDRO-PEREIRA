@@ -425,6 +425,7 @@
             this.txtBxTelefono.BackColor = System.Drawing.Color.LightGray;
             this.txtBxTelefono.Location = new System.Drawing.Point(552, 724);
             this.txtBxTelefono.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtBxTelefono.MaxLength = 99999999;
             this.txtBxTelefono.Name = "txtBxTelefono";
             this.txtBxTelefono.Size = new System.Drawing.Size(313, 37);
             this.txtBxTelefono.TabIndex = 32;
@@ -444,6 +445,7 @@
             this.txtBxEmergencia.BackColor = System.Drawing.Color.LightGray;
             this.txtBxEmergencia.Location = new System.Drawing.Point(1361, 724);
             this.txtBxEmergencia.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtBxEmergencia.MaxLength = 999999999;
             this.txtBxEmergencia.Name = "txtBxEmergencia";
             this.txtBxEmergencia.Size = new System.Drawing.Size(215, 37);
             this.txtBxEmergencia.TabIndex = 36;
@@ -709,7 +711,7 @@
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel2.BackColor = System.Drawing.Color.DarkCyan;
             this.panel2.Controls.Add(this.label23);
-            this.panel2.Location = new System.Drawing.Point(2778, 30);
+            this.panel2.Location = new System.Drawing.Point(2765, 30);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1707, 105);
             this.panel2.TabIndex = 50;

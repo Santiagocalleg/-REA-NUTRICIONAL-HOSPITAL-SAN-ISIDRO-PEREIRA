@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -214,6 +215,15 @@ namespace ÁREA_NUTRICIONAL_HOSPITAL_SAN_ISIDRO_PEREIRA
             miCaracterizacion.Antecedentesmedicos = txtBxAntecedentes.Text;
             miCaracterizacion.Convenio = cmbBxConvenio.SelectedItem.ToString();
 
+
+
+            int result = insertardatos(miCaracterizacion);
+            if (result<0)
+            {
+                MessageBox.Show("Error al insertar los datos");
+            }
+            else
+                MessageBox.Show("Se inserto correctamente los datos");
             MiLista.Add(miCaracterizacion);
             dtGrdVwvisualizacion.DataSource = null;
             dtGrdVwvisualizacion.DataSource = MiLista;
@@ -221,6 +231,58 @@ namespace ÁREA_NUTRICIONAL_HOSPITAL_SAN_ISIDRO_PEREIRA
             txtBxNombre.Focus();
             tlStrpLblConsultar.Enabled = true;
 
+        }
+        private int insertardatos(ClsLista obj)
+        {
+            try
+            {
+                using (SqlConnection cone = new SqlConnection("Data Source=(localdb)\\Servidor; Initial Catalog=nutricion"))
+                {//en la primera parte es como aparece en la tabla sql
+                 // en los values
+                    string sql = "INSERT INTO Caracterizacion(nombre, apellido, tipo_identificacion, numero_dentificacion, pais_origen, genero, fecha_nacimiento, edad, estado_civil, numero_hijos, direccion_residencia, barrio_residencia, tiempo_permanencia, telefono_contacto, contacto_emergencia, nivel_escolaridad, ocupacion, EPS, regimen, email, convenio, antecedente_medicos) " +
+                        "VALUES(@nombre, @apellido, @tipo_identificacion, @numero_dentificacion, @pais_origen, @genero, @fecha_nacimiento, @edad, @estado_civil, @numero_hijos, @direccion_residencia, @barrio_residencia, @tiempo_permanencia, @telefono_contacto, @contacto_emergencia, @nivel_escolaridad, @ocupacion, @EPS, @regimen, @email, @convenio, @antecedente_medicos)";
+                    using (SqlCommand comand = new SqlCommand(sql, cone))
+                    {
+                        comand.Parameters.AddWithValue("@nombre", obj.Nombrescompletos);
+                        comand.Parameters.AddWithValue("@apellido", obj.Apellidoscompletos);
+                        comand.Parameters.AddWithValue("@tipo_identificacion", obj.Tipoidentificacion);
+                        comand.Parameters.AddWithValue("@numero_dentificacion", obj.Numeroidentificacion);
+                        comand.Parameters.AddWithValue("@pais_origen", obj.Paisorigen);
+                        comand.Parameters.AddWithValue("@genero", obj.Genero);
+                        comand.Parameters.AddWithValue("@fecha_nacimiento", obj.Fechanacimiento);
+                        comand.Parameters.AddWithValue("@edad", obj.Edad);
+                        comand.Parameters.AddWithValue("@estado_civil", obj.Estadocivil);
+                        comand.Parameters.AddWithValue("@numero_hijos", obj.Numeroidentificacion);
+                        comand.Parameters.AddWithValue("@direccion_residencia", obj.Direccionresidencia);
+                        comand.Parameters.AddWithValue("@barrio_residencia", obj.Barrioresidencia);
+                        comand.Parameters.AddWithValue("@tiempo_permanencia", obj.Tiempopermanencia);
+                        comand.Parameters.AddWithValue("@telefono_contacto", obj.Telefonocontacto);
+                        comand.Parameters.AddWithValue("@contacto_emergencia", obj.Contactoemergencia);
+                        comand.Parameters.AddWithValue("@nivel_escolaridad", obj.Nivelescolaridad);
+                        comand.Parameters.AddWithValue("@ocupacion", obj.Ocupacion);
+                        comand.Parameters.AddWithValue("@EPS", obj.Eps);
+                        comand.Parameters.AddWithValue("@regimen", obj.Regimen);
+                        comand.Parameters.AddWithValue("@email", obj.Email);
+                        comand.Parameters.AddWithValue("@convenio", obj.Convenio);
+                        comand.Parameters.AddWithValue("@antecedente_medicos", obj.Antecedentesmedicos);
+                        cone.Open();
+
+                        int result = comand.ExecuteNonQuery();
+                        return result;
+
+
+                    }
+                }
+            }
+
+            catch (Exception err)
+            {
+                MessageBox.Show(err.ToString());
+                return -404;
+            }
+                
+
+            
         }
         //Metodo para limpiar los controles
         private void LimpiarControles()
